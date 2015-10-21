@@ -8,7 +8,7 @@
 #ifndef TMP112_I2C_TEMPERATURE_SENSOR_H_
 #define TMP112_I2C_TEMPERATURE_SENSOR_H_
 
-#include <driverlib/MSP430FR57xx/driverlib.h>
+#include <stdbool.h>
 #include "../typedefs.h"
 
 #define ALERT_PORT 		GPIO_PORT_P2
@@ -22,14 +22,13 @@
 #define TMP112_CONFIG_ADDR         0x01
 
 // Configuration parameters
-//Byte 1
 #define BYTE1_INIT_CFG		0b01100001
 #define BYTE2_INIT_CFG		0b10100000
 
 #define SHOOT_CONVERSION1	0b11100001
 #define SHOOT_CONVERSION2	0b10100000
 
-//Byte 2
+#define BIT12 0x800
 
 bool temperatureStatus (void);
 void measureTMP112(twoBytes *temperatureBytes);

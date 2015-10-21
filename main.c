@@ -19,10 +19,10 @@ int main(void) {
 	Grace_init();                   // Activate Grace-generated configuration
 	// >>>>> Fill-in user code here <<<<<
 
-	configTMP112();
+	//configTMP112();
 
 	while (1) {
 		measureSensors(&light,&temperature);
 	}
-	return (0);
+
 }
