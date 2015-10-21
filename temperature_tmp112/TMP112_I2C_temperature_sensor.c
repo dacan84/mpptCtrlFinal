@@ -51,13 +51,9 @@ void measureTMP112(twoBytes *temperatureBytes) {
 
 	EUSCI_B_I2C_masterSendMultiByteStart(EUSCI_B0_BASE,
 	TMP112_TEMPERATURE_ADDR);
-	while (EUSCI_B_I2C_masterIsStartSent(EUSCI_B0_BASE)!=EUSCI_B_I2C_STOP_SEND_COMPLETE){
-				//EUSCI_B_I2C_masterReceiveMultiByteStop(EUSCI_B0_BASE);
-			}
+	while (EUSCI_B_I2C_masterIsStartSent(EUSCI_B0_BASE)!=EUSCI_B_I2C_STOP_SEND_COMPLETE);
 	EUSCI_B_I2C_masterReceiveMultiByteStop(EUSCI_B0_BASE);
-//	while (EUSCI_B_I2C_masterIsStopSent(EUSCI_B0_BASE)!=EUSCI_B_I2C_STOP_SEND_COMPLETE){
-//			EUSCI_B_I2C_masterReceiveMultiByteStop(EUSCI_B0_BASE);
-//		}
+
 	__no_operation();
 	__no_operation();
 	EUSCI_B_I2C_masterReceiveStart(EUSCI_B0_BASE);

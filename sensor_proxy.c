@@ -16,9 +16,10 @@ void measureSensors (float *light, float *temperature) {
 
 	measureTMP112(&temperatureBytes);
 	*temperature = calculateTMP112(&temperatureBytes);
-//
-//	measureLight(&lightBytes);
-//	*light = calculateLight(&lightBytes);
+	__no_operation();
+	__no_operation();
+	measureLight(&lightBytes);
+	*light = calculateLight(&lightBytes);
 
 }
 

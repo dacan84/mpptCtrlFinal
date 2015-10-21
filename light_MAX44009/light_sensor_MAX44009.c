@@ -10,22 +10,22 @@
 #include <math.h>
 
 void measureLight(twoBytes *lightBytes) {
+	EUSCI_B_I2C_disable(EUSCI_B0_BASE);
 	EUSCI_B_I2C_setSlaveAddress(EUSCI_B0_BASE, LUX_SLV_ADDR0);
-
-//	EUSCI_B_I2C_enable(EUSCI_B0_BASE);
+	EUSCI_B_I2C_enable(EUSCI_B0_BASE);
 
 	EUSCI_B_I2C_masterSendSingleByte(EUSCI_B0_BASE, LUX_HIGH_ADDR);
-	while (EUSCI_B_I2C_isBusBusy(EUSCI_B0_BASE));
+	while (EUSCI_B_I2C_isBusBusy(EUSCI_B0_BASE)==EUSCI_B_I2C_BUS_BUSY);
 
 	lightBytes->highByte = EUSCI_B_I2C_masterReceiveSingleByte(EUSCI_B0_BASE);
 	while (EUSCI_B_I2C_isBusBusy(EUSCI_B0_BASE));
 
 	EUSCI_B_I2C_masterSendSingleByte(EUSCI_B0_BASE, LUX_LOW_ADDR);
-	while (EUSCI_B_I2C_isBusBusy(EUSCI_B0_BASE));
+	while (EUSCI_B_I2C_isBusBusy(EUSCI_B0_BASE)==EUSCI_B_I2C_BUS_BUSY);
 
 	lightBytes->lowByte = EUSCI_B_I2C_masterReceiveSingleByte(EUSCI_B0_BASE);
-	while (EUSCI_B_I2C_isBusBusy(EUSCI_B0_BASE));
-	//EUSCI_B_I2C_disable(EUSCI_B0_BASE);
+	while (EUSCI_B_I2C_isBusBusy(EUSCI_B0_BASE)==EUSCI_B_I2C_BUS_BUSY);
+	EUSCI_B_I2C_disable(EUSCI_B0_BASE);
 
 }
 
