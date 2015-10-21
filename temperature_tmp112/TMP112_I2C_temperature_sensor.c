@@ -61,9 +61,9 @@ void measureTMP112(twoBytes *temperatureBytes) {
 	__no_operation();
 	__no_operation();
 	EUSCI_B_I2C_masterReceiveStart(EUSCI_B0_BASE);
-	temperatureBytes->highByte = EUSCI_B_I2C_masterReceiveMultiByteNext(
+	temperatureBytes->lowByte = EUSCI_B_I2C_masterReceiveMultiByteNext(
 	EUSCI_B0_BASE);
-	temperatureBytes->lowByte = EUSCI_B_I2C_masterReceiveMultiByteFinish(
+	temperatureBytes->highByte = EUSCI_B_I2C_masterReceiveMultiByteFinish(
 	EUSCI_B0_BASE);
 
 	EUSCI_B_I2C_masterReceiveMultiByteStop(EUSCI_B0_BASE);
@@ -76,6 +76,8 @@ void measureTMP112(twoBytes *temperatureBytes) {
 
 }
 
+
+//The results achieved, shown that the behaviour is not as the datasheed indicate. The byte that is received fist is the LSB instead of the MSB.
 float calculateTMP112(twoBytes *temperatureBytes) {
 	uint16_t temperatureIn16Bits;
 	float temperature;
