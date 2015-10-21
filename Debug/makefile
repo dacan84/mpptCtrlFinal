@@ -11,6 +11,7 @@ ORDERED_OBJS += \
 "./sensor_proxy.obj" \
 "./temperature_tmp112/TMP112_I2C_temperature_sensor.obj" \
 "./light_MAX44009/light_sensor_MAX44009.obj" \
+"./adc/averaged_adc.obj" \
 "../lnk_msp430fr5739.cmd" \
 $(GEN_CMDS__FLAG) \
 -l"libmath.a" \
@@ -26,9 +27,11 @@ RMDIR := RMDIR /S/Q
 -include subdir_vars.mk
 -include temperature_tmp112/subdir_vars.mk
 -include light_MAX44009/subdir_vars.mk
+-include adc/subdir_vars.mk
 -include subdir_rules.mk
 -include temperature_tmp112/subdir_rules.mk
 -include light_MAX44009/subdir_rules.mk
+-include adc/subdir_rules.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -155,8 +158,8 @@ mpptCtrlFinal.hex: $(EXE_OUTPUTS)
 clean:
 	-$(RM) $(GEN_MISC_FILES__QUOTED)$(EXE_OUTPUTS__QUOTED)$(GEN_FILES__QUOTED)$(BIN_OUTPUTS__QUOTED)$(GEN_OPTS__QUOTED)$(GEN_CMDS__QUOTED)
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)
-	-$(RM) "main.pp" "sensor_proxy.pp" "temperature_tmp112\TMP112_I2C_temperature_sensor.pp" "light_MAX44009\light_sensor_MAX44009.pp" 
-	-$(RM) "main.obj" "sensor_proxy.obj" "temperature_tmp112\TMP112_I2C_temperature_sensor.obj" "light_MAX44009\light_sensor_MAX44009.obj" 
+	-$(RM) "main.pp" "sensor_proxy.pp" "temperature_tmp112\TMP112_I2C_temperature_sensor.pp" "light_MAX44009\light_sensor_MAX44009.pp" "adc\averaged_adc.pp" 
+	-$(RM) "main.obj" "sensor_proxy.obj" "temperature_tmp112\TMP112_I2C_temperature_sensor.obj" "light_MAX44009\light_sensor_MAX44009.obj" "adc\averaged_adc.obj" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

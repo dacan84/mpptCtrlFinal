@@ -27,7 +27,7 @@ endif
 all: grace.lib
 
 # always add power advice options to the Grace generated files 
-objs/Grace_init.obj objs/CSL_init.obj objs/PinMux_init.obj objs/CS_init.obj objs/EUSCI_B0_init.obj objs/InterruptVectors_init.obj objs/System_init.obj objs/WDT_A_init.obj: CCOPTS := $(CCOPTS) --advice:power=all
+objs/Grace_init.obj objs/CSL_init.obj objs/PinMux_init.obj objs/CS_init.obj objs/EUSCI_B0_init.obj objs/ADC10_B_init.obj objs/REF_init.obj objs/InterruptVectors_init.obj objs/System_init.obj objs/WDT_A_init.obj: CCOPTS := $(CCOPTS) --advice:power=all
 
 # supress power advice for driverlib by default; the user can override this by setting project options
  objs/adc10_b.obj objs/comp_d.obj objs/crc.obj objs/cs.obj objs/dma.obj objs/eusci_a_spi.obj objs/eusci_a_uart.obj objs/eusci_b_i2c.obj objs/eusci_b_spi.obj objs/framctl.obj objs/gpio.obj objs/mpu.obj objs/mpy32.obj objs/pmm.obj objs/ref.obj objs/rtc_b.obj objs/sfr.obj objs/sysctl.obj objs/timer_a.obj objs/timer_b.obj objs/tlv.obj objs/wdt_a.obj:  CCOPTS := --advice:power_severity=suppress $(CCOPTS)
@@ -38,7 +38,7 @@ objs/%.obj: %.c makefile
 	$(CC) $(CCOPTS) $(CPPFLAGS) "$<"
 
 # rule to combine all objects into the grace.lib library
-grace.lib: objs/Grace_init.obj objs/CSL_init.obj objs/PinMux_init.obj objs/CS_init.obj objs/EUSCI_B0_init.obj objs/InterruptVectors_init.obj objs/System_init.obj objs/WDT_A_init.obj objs/adc10_b.obj objs/comp_d.obj objs/crc.obj objs/cs.obj objs/dma.obj objs/eusci_a_spi.obj objs/eusci_a_uart.obj objs/eusci_b_i2c.obj objs/eusci_b_spi.obj objs/framctl.obj objs/gpio.obj objs/mpu.obj objs/mpy32.obj objs/pmm.obj objs/ref.obj objs/rtc_b.obj objs/sfr.obj objs/sysctl.obj objs/timer_a.obj objs/timer_b.obj objs/tlv.obj objs/wdt_a.obj
+grace.lib: objs/Grace_init.obj objs/CSL_init.obj objs/PinMux_init.obj objs/CS_init.obj objs/EUSCI_B0_init.obj objs/ADC10_B_init.obj objs/REF_init.obj objs/InterruptVectors_init.obj objs/System_init.obj objs/WDT_A_init.obj objs/adc10_b.obj objs/comp_d.obj objs/crc.obj objs/cs.obj objs/dma.obj objs/eusci_a_spi.obj objs/eusci_a_uart.obj objs/eusci_b_i2c.obj objs/eusci_b_spi.obj objs/framctl.obj objs/gpio.obj objs/mpu.obj objs/mpy32.obj objs/pmm.obj objs/ref.obj objs/rtc_b.obj objs/sfr.obj objs/sysctl.obj objs/timer_a.obj objs/timer_b.obj objs/tlv.obj objs/wdt_a.obj
 	@ echo are430X $@ $< ...
 	$(AR) $@ $^
 

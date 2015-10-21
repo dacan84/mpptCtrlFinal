@@ -1,10 +1,10 @@
 ******************************************************************************
                   MSP430 Linker PC v4.4.3                      
 ******************************************************************************
->> Linked Wed Oct 21 17:41:05 2015
+>> Linked Wed Oct 21 18:50:51 2015
 
 OUTPUT FILE NAME:   <mpptCtrlFinal.out>
-ENTRY POINT SYMBOL: "_c_int00_noargs_noexit"  address: 0000f660
+ENTRY POINT SYMBOL: "_c_int00_noargs_noexit"  address: 0000f6de
 
 
 MEMORY CONFIGURATION
@@ -17,7 +17,7 @@ MEMORY CONFIGURATION
   INFOB                 00001800   00000080  00000000  00000080  RWIX
   INFOA                 00001880   00000080  00000000  00000080  RWIX
   RAM                   00001c00   00000400  000001f2  0000020e  RWIX
-  FRAM                  0000c200   00003d80  000036fc  00000684  RWIX
+  FRAM                  0000c200   00003d80  000037ac  000005d4  RWIX
   JTAGSIGNATURE         0000ff80   00000004  00000004  00000000  RWIX  ffff 
   BSLSIGNATURE          0000ff84   00000004  00000004  00000000  RWIX  ffff 
   IPESIGNATURE          0000ff88   00000008  00000008  00000000  RWIX  ffff 
@@ -134,7 +134,7 @@ section   page    origin      length       input sections
                   0000c460    00000008     rts430x_lc_rd_eabi.lib : xdint.obj (.const:sub$2)
                   0000c468    00000004     TMP112_I2C_temperature_sensor.obj (.const)
 
-.text      0    0000c600    000032fc     
+.text      0    0000c600    000033ac     
                   0000c600    0000068a     rts430x_lc_rd_eabi.lib : pow.obj (.text:pow)
                   0000cc8a    00000452                            : frcdivd.obj (.text:__TI_frcdivd)
                   0000d0dc    00000420                            : xlog.obj (.text:_Log)
@@ -155,77 +155,84 @@ section   page    origin      length       input sections
                   0000ec6a    00000094     TMP112_I2C_temperature_sensor.obj (.text:measureTMP112)
                   0000ecfe    00000090     light_sensor_MAX44009.obj (.text:measureLight)
                   0000ed8e    0000008c     rts430x_lc_rd_eabi.lib : cvtdf.obj (.text:__mspabi_cvtdf)
-                  0000ee1a    0000007e     light_sensor_MAX44009.obj (.text:calculateLight)
-                  0000ee98    00000076     grace.lib : PinMux_init.obj (.text:PinMux_graceInit)
-                  0000ef0e    00000076     rts430x_lc_rd_eabi.lib : fltuld.obj (.text:__mspabi_fltuld)
-                  0000ef84    00000072                            : xdunscal.obj (.text:_Dunscale)
-                  0000eff6    00000070     boot.ae430X : autoinit_wdt.oe430X (.text:_auto_init_hold_wdt)
-                  0000f066    00000068     rts430x_lc_rd_eabi.lib : copy_decompress_rle.obj (.text:__TI_decompress_rle_core)
-                  0000f0ce    00000066     grace.lib : cs.obj (.text:CS_initClockSignal)
-                  0000f134    00000066     rts430x_lc_rd_eabi.lib : fixdli.obj (.text:__mspabi_fixdli)
-                  0000f19a    00000064                            : cvtfd.obj (.text:__mspabi_cvtfd)
-                  0000f1fe    00000060     grace.lib : eusci_b_i2c.obj (.text:EUSCI_B_I2C_initMaster)
-                  0000f25e    0000005c               : eusci_b_i2c.obj (.text:EUSCI_B_I2C_masterSendSingleByte)
-                  0000f2ba    00000058     rts430x_lc_rd_eabi.lib : div32u.obj (.text)
-                  0000f312    00000050     TMP112_I2C_temperature_sensor.obj (.text:calculateTMP112)
-                  0000f362    00000042     sensor_proxy.obj (.text:measureSensors)
-                  0000f3a4    00000040     grace.lib : eusci_b_i2c.obj (.text:EUSCI_B_I2C_masterSendMultiByteStart)
-                  0000f3e4    0000003e     rts430x_lc_rd_eabi.lib : asr32.obj (.text:l_asr_const)
-                  0000f422    0000003e                            : lsl32.obj (.text:l_lsl_const)
-                  0000f460    0000003e                            : lsr32.obj (.text:l_lsr_const)
-                  0000f49e    00000038     grace.lib : CS_init.obj (.text:CS_graceInit)
-                  0000f4d6    00000038     rts430x_lc_rd_eabi.lib : signal.obj (.text:signal)
-                  0000f50e    00000036                            : xferaise.obj (.text:_Feraise)
-                  0000f544    00000034                            : feraiseexcept.obj (.text:feraiseexcept)
-                  0000f578    00000032                            : subd.obj (.text:__mspabi_subd)
-                  0000f5aa    00000032                            : raise.obj (.text:raise)
-                  0000f5dc    0000002e     grace.lib : cs.obj (.text:CS_clearAllOscFlagsWithTimeout)
-                  0000f60a    0000002e     rts430x_lc_rd_eabi.lib : negd.obj (.text:__mspabi_negd)
-                  0000f638    00000028                            : fixdi.obj (.text:__mspabi_fixdi)
-                  0000f660    00000026     boot.ae430X : boot_special.oe430X (.text:_isr:_c_int00_noargs_noexit)
-                  0000f686    00000024     grace.lib : eusci_b_i2c.obj (.text:EUSCI_B_I2C_masterReceiveMultiByteFinish)
-                  0000f6aa    00000024     rts430x_lc_rd_eabi.lib : copy_zero_init.obj (.text:decompress:ZI:__TI_zero_init)
-                  0000f6ce    00000024                            : fs_utof.obj (.text)
-                  0000f6f2    00000022     grace.lib : eusci_b_i2c.obj (.text:EUSCI_B_I2C_masterReceiveSingleByte)
-                  0000f714    00000022               : Grace_init.obj (.text:Grace_init)
-                  0000f736    00000022     rts430x_lc_rd_eabi.lib : mult32_f5hw.obj (.text)
-                  0000f758    00000020     grace.lib : wdt_a.obj (.text:WDT_A_hold)
-                  0000f778    00000016     rts430x_lc_rd_eabi.lib : mult16_f5hw.obj (.text)
-                  0000f78e    00000014     main.obj (.text:main)
-                  0000f7a2    00000014     rts430x_lc_rd_eabi.lib : memcpy.obj (.text:memcpy)
-                  0000f7b6    00000012     grace.lib : cs.obj (.text:CS_setDCOFreq)
-                  0000f7c8    00000012     rts430x_lc_rd_eabi.lib : copy_decompress_none.obj (.text:decompress:none:__TI_decompress_none)
-                  0000f7da    00000010                            : asr32.obj (.text:l_asr)
-                  0000f7ea    00000010                            : lsl32.obj (.text:l_lsl)
-                  0000f7fa    00000010                            : lsr32.obj (.text:l_lsr)
-                  0000f80a    0000000e     grace.lib : eusci_b_i2c.obj (.text:EUSCI_B_I2C_setMode)
-                  0000f818    0000000e     rts430x_lc_rd_eabi.lib : log.obj (.text:log)
-                  0000f826    0000000e     TMP112_I2C_temperature_sensor.obj (.text:signedByteCheker)
-                  0000f834    0000000c     grace.lib : eusci_b_i2c.obj (.text:EUSCI_B_I2C_disableInterrupt)
-                  0000f840    0000000c               : eusci_b_i2c.obj (.text:EUSCI_B_I2C_isBusBusy)
-                  0000f84c    0000000c               : eusci_b_i2c.obj (.text:EUSCI_B_I2C_masterReceiveStart)
-                  0000f858    0000000c               : eusci_b_i2c.obj (.text:EUSCI_B_I2C_setSlaveAddress)
-                  0000f864    0000000c     rts430x_lc_rd_eabi.lib : fltid.obj (.text:__mspabi_fltid)
-                  0000f870    0000000a     main_pe430X.oe430X (.text:.bootCodeSection:ti_catalog_msp430_init_Boot_init)
-                  0000f87a    0000000a     grace.lib : eusci_b_i2c.obj (.text:EUSCI_B_I2C_masterReceiveMultiByteNext)
-                  0000f884    0000000a               : WDT_A_init.obj (.text:WDT_A_graceInit)
-                  0000f88e    0000000a     rts430x_lc_rd_eabi.lib : fs_neg.obj (.text)
-                  0000f898    0000000a                            : lsl16.obj (.text)
-                  0000f8a2    0000000a                            : lsr16.obj (.text)
-                  0000f8ac    00000008     ti.catalog.msp430.init.ae430X : Boot.oe430X (.text:.bootCodeSection:ti_catalog_msp430_init_Boot_disableWatchdog)
-                  0000f8b4    00000008     grace.lib : eusci_b_i2c.obj (.text:EUSCI_B_I2C_masterIsStartSent)
-                  0000f8bc    00000008               : eusci_b_i2c.obj (.text:EUSCI_B_I2C_masterIsStopSent)
-                  0000f8c4    00000008               : System_init.obj (.text:System_graceInit)
-                  0000f8cc    00000006               : eusci_b_i2c.obj (.text:EUSCI_B_I2C_disable)
-                  0000f8d2    00000006               : eusci_b_i2c.obj (.text:EUSCI_B_I2C_enable)
-                  0000f8d8    00000006               : eusci_b_i2c.obj (.text:EUSCI_B_I2C_masterReceiveMultiByteStop)
-                  0000f8de    00000006     rts430x_lc_rd_eabi.lib : fltud.obj (.text:__mspabi_fltud)
-                  0000f8e4    00000006                            : isr_trap.obj (.text:_isr:__TI_ISR_TRAP)
-                  0000f8ea    00000006                            : copy_decompress_rle.obj (.text:decompress:rle24:__TI_decompress_rle24)
-                  0000f8f0    00000004     boot.ae430X : pre_init.oe430X (.text:_system_pre_init)
-                  0000f8f4    00000004     rts430x_lc_rd_eabi.lib : exit.obj (.text:abort)
-                  0000f8f8    00000002     grace.lib : InterruptVectors_init.obj (.text:InterruptVectors_graceInit)
-                  0000f8fa    00000002     rts430x_lc_rd_eabi.lib : _lock.obj (.text:_nop)
+                  0000ee1a    0000007e     grace.lib : PinMux_init.obj (.text:PinMux_graceInit)
+                  0000ee98    0000007e     light_sensor_MAX44009.obj (.text:calculateLight)
+                  0000ef16    00000076     rts430x_lc_rd_eabi.lib : fltuld.obj (.text:__mspabi_fltuld)
+                  0000ef8c    00000072                            : xdunscal.obj (.text:_Dunscale)
+                  0000effe    00000070     boot.ae430X : autoinit_wdt.oe430X (.text:_auto_init_hold_wdt)
+                  0000f06e    00000068     rts430x_lc_rd_eabi.lib : copy_decompress_rle.obj (.text:__TI_decompress_rle_core)
+                  0000f0d6    00000066     grace.lib : cs.obj (.text:CS_initClockSignal)
+                  0000f13c    00000066     rts430x_lc_rd_eabi.lib : fixdli.obj (.text:__mspabi_fixdli)
+                  0000f1a2    00000064                            : cvtfd.obj (.text:__mspabi_cvtfd)
+                  0000f206    00000060     grace.lib : eusci_b_i2c.obj (.text:EUSCI_B_I2C_initMaster)
+                  0000f266    0000005c               : eusci_b_i2c.obj (.text:EUSCI_B_I2C_masterSendSingleByte)
+                  0000f2c2    00000058     rts430x_lc_rd_eabi.lib : div32u.obj (.text)
+                  0000f31a    00000050     TMP112_I2C_temperature_sensor.obj (.text:calculateTMP112)
+                  0000f36a    0000004c     grace.lib : adc10_b.obj (.text:ADC10_B_init)
+                  0000f3b6    00000042     sensor_proxy.obj (.text:measureSensors)
+                  0000f3f8    00000040     grace.lib : eusci_b_i2c.obj (.text:EUSCI_B_I2C_masterSendMultiByteStart)
+                  0000f438    0000003e     rts430x_lc_rd_eabi.lib : asr32.obj (.text:l_asr_const)
+                  0000f476    0000003e                            : lsl32.obj (.text:l_lsl_const)
+                  0000f4b4    0000003e                            : lsr32.obj (.text:l_lsr_const)
+                  0000f4f2    00000038     grace.lib : CS_init.obj (.text:CS_graceInit)
+                  0000f52a    00000038     rts430x_lc_rd_eabi.lib : signal.obj (.text:signal)
+                  0000f562    00000036                            : xferaise.obj (.text:_Feraise)
+                  0000f598    00000034                            : feraiseexcept.obj (.text:feraiseexcept)
+                  0000f5cc    00000032                            : subd.obj (.text:__mspabi_subd)
+                  0000f5fe    00000032                            : raise.obj (.text:raise)
+                  0000f630    0000002e     grace.lib : cs.obj (.text:CS_clearAllOscFlagsWithTimeout)
+                  0000f65e    0000002e     rts430x_lc_rd_eabi.lib : negd.obj (.text:__mspabi_negd)
+                  0000f68c    0000002a     grace.lib : Grace_init.obj (.text:Grace_init)
+                  0000f6b6    00000028     rts430x_lc_rd_eabi.lib : fixdi.obj (.text:__mspabi_fixdi)
+                  0000f6de    00000026     boot.ae430X : boot_special.oe430X (.text:_isr:_c_int00_noargs_noexit)
+                  0000f704    00000024     grace.lib : eusci_b_i2c.obj (.text:EUSCI_B_I2C_masterReceiveMultiByteFinish)
+                  0000f728    00000024     rts430x_lc_rd_eabi.lib : copy_zero_init.obj (.text:decompress:ZI:__TI_zero_init)
+                  0000f74c    00000024                            : fs_utof.obj (.text)
+                  0000f770    00000022     grace.lib : eusci_b_i2c.obj (.text:EUSCI_B_I2C_masterReceiveSingleByte)
+                  0000f792    00000022     rts430x_lc_rd_eabi.lib : mult32_f5hw.obj (.text)
+                  0000f7b4    00000020     grace.lib : wdt_a.obj (.text:WDT_A_hold)
+                  0000f7d4    0000001c               : REF_init.obj (.text:REF_graceInit)
+                  0000f7f0    00000018               : ADC10_B_init.obj (.text:ADC10_B_graceInit)
+                  0000f808    00000016     rts430x_lc_rd_eabi.lib : mult16_f5hw.obj (.text)
+                  0000f81e    00000014     main.obj (.text:main)
+                  0000f832    00000014     rts430x_lc_rd_eabi.lib : memcpy.obj (.text:memcpy)
+                  0000f846    00000012     grace.lib : cs.obj (.text:CS_setDCOFreq)
+                  0000f858    00000012     rts430x_lc_rd_eabi.lib : copy_decompress_none.obj (.text:decompress:none:__TI_decompress_none)
+                  0000f86a    00000010                            : asr32.obj (.text:l_asr)
+                  0000f87a    00000010                            : lsl32.obj (.text:l_lsl)
+                  0000f88a    00000010                            : lsr32.obj (.text:l_lsr)
+                  0000f89a    0000000e     grace.lib : eusci_b_i2c.obj (.text:EUSCI_B_I2C_setMode)
+                  0000f8a8    0000000e     rts430x_lc_rd_eabi.lib : log.obj (.text:log)
+                  0000f8b6    0000000e     TMP112_I2C_temperature_sensor.obj (.text:signedByteCheker)
+                  0000f8c4    0000000c     grace.lib : eusci_b_i2c.obj (.text:EUSCI_B_I2C_disableInterrupt)
+                  0000f8d0    0000000c               : eusci_b_i2c.obj (.text:EUSCI_B_I2C_isBusBusy)
+                  0000f8dc    0000000c               : eusci_b_i2c.obj (.text:EUSCI_B_I2C_masterReceiveStart)
+                  0000f8e8    0000000c               : eusci_b_i2c.obj (.text:EUSCI_B_I2C_setSlaveAddress)
+                  0000f8f4    0000000c               : ref.obj (.text:Ref_setReferenceVoltage)
+                  0000f900    0000000c     rts430x_lc_rd_eabi.lib : fltid.obj (.text:__mspabi_fltid)
+                  0000f90c    0000000a     main_pe430X.oe430X (.text:.bootCodeSection:ti_catalog_msp430_init_Boot_init)
+                  0000f916    0000000a     grace.lib : eusci_b_i2c.obj (.text:EUSCI_B_I2C_masterReceiveMultiByteNext)
+                  0000f920    0000000a               : WDT_A_init.obj (.text:WDT_A_graceInit)
+                  0000f92a    0000000a     rts430x_lc_rd_eabi.lib : fs_neg.obj (.text)
+                  0000f934    0000000a                            : lsl16.obj (.text)
+                  0000f93e    0000000a                            : lsr16.obj (.text)
+                  0000f948    00000008     ti.catalog.msp430.init.ae430X : Boot.oe430X (.text:.bootCodeSection:ti_catalog_msp430_init_Boot_disableWatchdog)
+                  0000f950    00000008     grace.lib : adc10_b.obj (.text:ADC10_B_disable)
+                  0000f958    00000008               : eusci_b_i2c.obj (.text:EUSCI_B_I2C_masterIsStartSent)
+                  0000f960    00000008               : eusci_b_i2c.obj (.text:EUSCI_B_I2C_masterIsStopSent)
+                  0000f968    00000008               : System_init.obj (.text:System_graceInit)
+                  0000f970    00000006               : eusci_b_i2c.obj (.text:EUSCI_B_I2C_disable)
+                  0000f976    00000006               : eusci_b_i2c.obj (.text:EUSCI_B_I2C_enable)
+                  0000f97c    00000006               : eusci_b_i2c.obj (.text:EUSCI_B_I2C_masterReceiveMultiByteStop)
+                  0000f982    00000006               : ref.obj (.text:Ref_disableTempSensor)
+                  0000f988    00000006               : ref.obj (.text:Ref_enableReferenceVoltage)
+                  0000f98e    00000006     rts430x_lc_rd_eabi.lib : fltud.obj (.text:__mspabi_fltud)
+                  0000f994    00000006                            : isr_trap.obj (.text:_isr:__TI_ISR_TRAP)
+                  0000f99a    00000006                            : copy_decompress_rle.obj (.text:decompress:rle24:__TI_decompress_rle24)
+                  0000f9a0    00000004     boot.ae430X : pre_init.oe430X (.text:_system_pre_init)
+                  0000f9a4    00000004     rts430x_lc_rd_eabi.lib : exit.obj (.text:abort)
+                  0000f9a8    00000002     grace.lib : InterruptVectors_init.obj (.text:InterruptVectors_graceInit)
+                  0000f9aa    00000002     rts430x_lc_rd_eabi.lib : _lock.obj (.text:_nop)
 
 $fill000   0    0000ff80    00000004     
                   0000ff80    00000004     --HOLE-- [fill = ffff]
@@ -374,9 +381,12 @@ address   name
 00000712  ADC10MEM0                                  
 00000713  ADC10MEM0_H                                
 00000712  ADC10MEM0_L                                
+0000f950  ADC10_B_disable                            
+0000f7f0  ADC10_B_graceInit                          
+0000f36a  ADC10_B_init                               
 000004be  BCD2BIN                                    
 000004bc  BIN2BCD                                    
-0000f8f4  C$$EXIT                                    
+0000f9a4  C$$EXIT                                    
 000008c0  CDCTL0                                     
 000008c1  CDCTL0_H                                   
 000008c0  CDCTL0_L                                   
@@ -428,10 +438,10 @@ address   name
 0000016c  CSCTL6                                     
 0000016d  CSCTL6_H                                   
 0000016c  CSCTL6_L                                   
-0000f5dc  CS_clearAllOscFlagsWithTimeout             
-0000f49e  CS_graceInit                               
-0000f0ce  CS_initClockSignal                         
-0000f7b6  CS_setDCOFreq                              
+0000f630  CS_clearAllOscFlagsWithTimeout             
+0000f4f2  CS_graceInit                               
+0000f0d6  CS_initClockSignal                         
+0000f846  CS_setDCOFreq                              
 0000c468  DEGREES_PER_LSB                            
 00000510  DMA0CTL                                    
 00000511  DMA0CTL_H                                  
@@ -482,22 +492,22 @@ address   name
 0000050f  DMAIV_H                                    
 0000050e  DMAIV_L                                    
 0000e7d4  EUSCI_B0_graceInit                         
-0000f8cc  EUSCI_B_I2C_disable                        
-0000f834  EUSCI_B_I2C_disableInterrupt               
-0000f8d2  EUSCI_B_I2C_enable                         
-0000f1fe  EUSCI_B_I2C_initMaster                     
-0000f840  EUSCI_B_I2C_isBusBusy                      
-0000f8b4  EUSCI_B_I2C_masterIsStartSent              
-0000f8bc  EUSCI_B_I2C_masterIsStopSent               
-0000f686  EUSCI_B_I2C_masterReceiveMultiByteFinish   
-0000f87a  EUSCI_B_I2C_masterReceiveMultiByteNext     
-0000f8d8  EUSCI_B_I2C_masterReceiveMultiByteStop     
-0000f6f2  EUSCI_B_I2C_masterReceiveSingleByte        
-0000f84c  EUSCI_B_I2C_masterReceiveStart             
-0000f3a4  EUSCI_B_I2C_masterSendMultiByteStart       
-0000f25e  EUSCI_B_I2C_masterSendSingleByte           
-0000f80a  EUSCI_B_I2C_setMode                        
-0000f858  EUSCI_B_I2C_setSlaveAddress                
+0000f970  EUSCI_B_I2C_disable                        
+0000f8c4  EUSCI_B_I2C_disableInterrupt               
+0000f976  EUSCI_B_I2C_enable                         
+0000f206  EUSCI_B_I2C_initMaster                     
+0000f8d0  EUSCI_B_I2C_isBusBusy                      
+0000f958  EUSCI_B_I2C_masterIsStartSent              
+0000f960  EUSCI_B_I2C_masterIsStopSent               
+0000f704  EUSCI_B_I2C_masterReceiveMultiByteFinish   
+0000f916  EUSCI_B_I2C_masterReceiveMultiByteNext     
+0000f97c  EUSCI_B_I2C_masterReceiveMultiByteStop     
+0000f770  EUSCI_B_I2C_masterReceiveSingleByte        
+0000f8dc  EUSCI_B_I2C_masterReceiveStart             
+0000f3f8  EUSCI_B_I2C_masterSendMultiByteStart       
+0000f266  EUSCI_B_I2C_masterSendSingleByte           
+0000f89a  EUSCI_B_I2C_setMode                        
+0000f8e8  EUSCI_B_I2C_setSlaveAddress                
 00000140  FRCTL0                                     
 00000141  FRCTL0_H                                   
 00000140  FRCTL0_L                                   
@@ -507,8 +517,8 @@ address   name
 00000146  GCCTL1                                     
 00000147  GCCTL1_H                                   
 00000146  GCCTL1_L                                   
-0000f714  Grace_init                                 
-0000f8f8  InterruptVectors_graceInit                 
+0000f68c  Grace_init                                 
+0000f9a8  InterruptVectors_graceInit                 
 000004c4  MAC                                        
 000004da  MAC32H                                     
 000004db  MAC32H_H                                   
@@ -663,10 +673,11 @@ address   name
 0000012a  PMMIFG                                     
 0000012b  PMMIFG_H                                   
 0000012a  PMMIFG_L                                   
-0000ee98  PinMux_graceInit                           
+0000ee1a  PinMux_graceInit                           
 000001b0  REFCTL0                                    
 000001b1  REFCTL0_H                                  
 000001b0  REFCTL0_L                                  
+0000f7d4  REF_graceInit                              
 000004e4  RES0                                       
 000004e5  RES0_H                                     
 000004e4  RES0_L                                     
@@ -719,6 +730,9 @@ address   name
 000004b6  RTCYEAR                                    
 000004b7  RTCYEAR_H                                  
 000004b6  RTCYEAR_L                                  
+0000f982  Ref_disableTempSensor                      
+0000f988  Ref_enableReferenceVoltage                 
+0000f8f4  Ref_setReferenceVoltage                    
 00000100  SFRIE1                                     
 00000101  SFRIE1_H                                   
 00000100  SFRIE1_L                                   
@@ -764,7 +778,7 @@ address   name
 0000019a  SYSUNIV                                    
 0000019b  SYSUNIV_H                                  
 0000019a  SYSUNIV_L                                  
-0000f8c4  System_graceInit                           
+0000f968  System_graceInit                           
 00000352  TA0CCR0                                    
 00000354  TA0CCR1                                    
 00000356  TA0CCR2                                    
@@ -927,13 +941,13 @@ address   name
 0000015c  WDTCTL                                     
 0000015d  WDTCTL_H                                   
 0000015c  WDTCTL_L                                   
-0000f884  WDT_A_graceInit                            
-0000f758  WDT_A_hold                                 
+0000f920  WDT_A_graceInit                            
+0000f7b4  WDT_A_hold                                 
 00001cb0  _Denorm                                    
 0000e9a2  _Dint                                      
 0000e6d4  _Dnorm                                     
 0000e536  _Dscale                                    
-0000ef84  _Dunscale                                  
+0000ef8c  _Dunscale                                  
 00001cc0  _Eps                                       
 00001da8  _Errno                                     
 0000d4fc  _Exp                                       
@@ -946,7 +960,7 @@ address   name
 00001d90  _FXbig                                     
 00001d94  _FZero                                     
 00001d98  _Fenv                                      
-0000f50e  _Feraise                                   
+0000f562  _Feraise                                   
 00001cd0  _Hugeval                                   
 00001ce0  _Inf                                       
 0000d0dc  _Log                                       
@@ -968,9 +982,9 @@ address   name
 0000c3be  __TI_Handler_Table_Limit                   
 UNDEFED   __TI_INITARRAY_Base                        
 UNDEFED   __TI_INITARRAY_Limit                       
-0000f8e4  __TI_ISR_TRAP                              
-0000f7c8  __TI_decompress_none                       
-0000f8ea  __TI_decompress_rle24                      
+0000f994  __TI_ISR_TRAP                              
+0000f858  __TI_decompress_none                       
+0000f99a  __TI_decompress_rle24                      
 0000e0c2  __TI_frcaddd                               
 0000cc8a  __TI_frcdivd                               
 0000d884  __TI_frcmpyd                               
@@ -999,114 +1013,114 @@ UNDEFED   __TI_INITARRAY_Limit
 0000fffa  __TI_int53                                 
 0000fffc  __TI_int54                                 
 0000eb24  __TI_renormd                               
-0000f6aa  __TI_zero_init                             
+0000f728  __TI_zero_init                             
 000000cc  __TRDR__                                   
 ffffffff  __binit__                                  
 ffffffff  __c_args__                                 
 0000db68  __mspabi_addd                              
 0000e8ca  __mspabi_cmpd                              
 0000ed8e  __mspabi_cvtdf                             
-0000f19a  __mspabi_cvtfd                             
+0000f1a2  __mspabi_cvtfd                             
 0000e314  __mspabi_divd                              
-0000f2ba  __mspabi_divul                             
-0000f638  __mspabi_fixdi                             
-0000f134  __mspabi_fixdli                            
-0000f864  __mspabi_fltid                             
+0000f2c2  __mspabi_divul                             
+0000f6b6  __mspabi_fixdi                             
+0000f13c  __mspabi_fixdli                            
+0000f900  __mspabi_fltid                             
 0000ebd6  __mspabi_fltlid                            
-0000f8de  __mspabi_fltud                             
-0000f6ce  __mspabi_fltuf                             
-0000ef0e  __mspabi_fltuld                            
+0000f98e  __mspabi_fltud                             
+0000f74c  __mspabi_fltuf                             
+0000ef16  __mspabi_fltuld                            
 0000de40  __mspabi_mpyd                              
 0000ea6e  __mspabi_mpyf                              
-0000f778  __mspabi_mpyi_f5hw                         
-0000f736  __mspabi_mpyl_f5hw                         
-0000f60a  __mspabi_negd                              
-0000f88e  __mspabi_negf                              
-0000f2ba  __mspabi_remul                             
-0000f898  __mspabi_slli                              
-0000f7ea  __mspabi_slll                              
-0000f45a  __mspabi_slll_1                            
-0000f436  __mspabi_slll_10                           
-0000f432  __mspabi_slll_11                           
-0000f42e  __mspabi_slll_12                           
-0000f42a  __mspabi_slll_13                           
-0000f426  __mspabi_slll_14                           
-0000f422  __mspabi_slll_15                           
-0000f456  __mspabi_slll_2                            
-0000f452  __mspabi_slll_3                            
-0000f44e  __mspabi_slll_4                            
-0000f44a  __mspabi_slll_5                            
-0000f446  __mspabi_slll_6                            
-0000f442  __mspabi_slll_7                            
-0000f43e  __mspabi_slll_8                            
-0000f43a  __mspabi_slll_9                            
-0000f7da  __mspabi_sral                              
-0000f41c  __mspabi_sral_1                            
-0000f3f8  __mspabi_sral_10                           
-0000f3f4  __mspabi_sral_11                           
-0000f3f0  __mspabi_sral_12                           
-0000f3ec  __mspabi_sral_13                           
-0000f3e8  __mspabi_sral_14                           
-0000f3e4  __mspabi_sral_15                           
-0000f418  __mspabi_sral_2                            
-0000f414  __mspabi_sral_3                            
-0000f410  __mspabi_sral_4                            
-0000f40c  __mspabi_sral_5                            
-0000f408  __mspabi_sral_6                            
-0000f404  __mspabi_sral_7                            
-0000f400  __mspabi_sral_8                            
-0000f3fc  __mspabi_sral_9                            
-0000f8a2  __mspabi_srli                              
-0000f7fa  __mspabi_srll                              
-0000f498  __mspabi_srll_1                            
-0000f474  __mspabi_srll_10                           
-0000f470  __mspabi_srll_11                           
-0000f46c  __mspabi_srll_12                           
-0000f468  __mspabi_srll_13                           
-0000f464  __mspabi_srll_14                           
-0000f460  __mspabi_srll_15                           
-0000f494  __mspabi_srll_2                            
-0000f490  __mspabi_srll_3                            
-0000f48c  __mspabi_srll_4                            
-0000f488  __mspabi_srll_5                            
-0000f484  __mspabi_srll_6                            
-0000f480  __mspabi_srll_7                            
-0000f47c  __mspabi_srll_8                            
-0000f478  __mspabi_srll_9                            
-0000f578  __mspabi_subd                              
-0000eff6  _auto_init_hold_wdt                        
-0000f660  _c_int00_noargs_noexit                     
+0000f808  __mspabi_mpyi_f5hw                         
+0000f792  __mspabi_mpyl_f5hw                         
+0000f65e  __mspabi_negd                              
+0000f92a  __mspabi_negf                              
+0000f2c2  __mspabi_remul                             
+0000f934  __mspabi_slli                              
+0000f87a  __mspabi_slll                              
+0000f4ae  __mspabi_slll_1                            
+0000f48a  __mspabi_slll_10                           
+0000f486  __mspabi_slll_11                           
+0000f482  __mspabi_slll_12                           
+0000f47e  __mspabi_slll_13                           
+0000f47a  __mspabi_slll_14                           
+0000f476  __mspabi_slll_15                           
+0000f4aa  __mspabi_slll_2                            
+0000f4a6  __mspabi_slll_3                            
+0000f4a2  __mspabi_slll_4                            
+0000f49e  __mspabi_slll_5                            
+0000f49a  __mspabi_slll_6                            
+0000f496  __mspabi_slll_7                            
+0000f492  __mspabi_slll_8                            
+0000f48e  __mspabi_slll_9                            
+0000f86a  __mspabi_sral                              
+0000f470  __mspabi_sral_1                            
+0000f44c  __mspabi_sral_10                           
+0000f448  __mspabi_sral_11                           
+0000f444  __mspabi_sral_12                           
+0000f440  __mspabi_sral_13                           
+0000f43c  __mspabi_sral_14                           
+0000f438  __mspabi_sral_15                           
+0000f46c  __mspabi_sral_2                            
+0000f468  __mspabi_sral_3                            
+0000f464  __mspabi_sral_4                            
+0000f460  __mspabi_sral_5                            
+0000f45c  __mspabi_sral_6                            
+0000f458  __mspabi_sral_7                            
+0000f454  __mspabi_sral_8                            
+0000f450  __mspabi_sral_9                            
+0000f93e  __mspabi_srli                              
+0000f88a  __mspabi_srll                              
+0000f4ec  __mspabi_srll_1                            
+0000f4c8  __mspabi_srll_10                           
+0000f4c4  __mspabi_srll_11                           
+0000f4c0  __mspabi_srll_12                           
+0000f4bc  __mspabi_srll_13                           
+0000f4b8  __mspabi_srll_14                           
+0000f4b4  __mspabi_srll_15                           
+0000f4e8  __mspabi_srll_2                            
+0000f4e4  __mspabi_srll_3                            
+0000f4e0  __mspabi_srll_4                            
+0000f4dc  __mspabi_srll_5                            
+0000f4d8  __mspabi_srll_6                            
+0000f4d4  __mspabi_srll_7                            
+0000f4d0  __mspabi_srll_8                            
+0000f4cc  __mspabi_srll_9                            
+0000f5cc  __mspabi_subd                              
+0000effe  _auto_init_hold_wdt                        
+0000f6de  _c_int00_noargs_noexit                     
 00001da0  _lock                                      
-0000f8fa  _nop                                       
+0000f9aa  _nop                                       
 0000fffe  _reset_vector                              
 00001fc0  _stack                                     
-0000f8f0  _system_pre_init                           
+0000f9a0  _system_pre_init                           
 00001da4  _unlock                                    
-0000f8f4  abort                                      
+0000f9a4  abort                                      
 ffffffff  binit                                      
-0000ee1a  calculateLight                             
-0000f312  calculateTMP112                            
-0000f544  feraiseexcept                              
+0000ee98  calculateLight                             
+0000f31a  calculateTMP112                            
+0000f598  feraiseexcept                              
 0000c200  fram_ro_start                              
 0000c200  fram_rw_start                              
 0000c600  fram_rx_start                              
 00001daa  light                                      
-0000f818  log                                        
-0000f78e  main                                       
+0000f8a8  log                                        
+0000f81e  main                                       
 0000ecfe  measureLight                               
-0000f362  measureSensors                             
+0000f3b6  measureSensors                             
 0000ec6a  measureTMP112                              
-0000f7a2  memcpy                                     
+0000f832  memcpy                                     
 0000c600  pow                                        
-0000f5aa  raise                                      
-0000f4d6  signal                                     
+0000f5fe  raise                                      
+0000f52a  signal                                     
 00001dae  temperature                                
-0000f8ac  ti_catalog_msp430_init_Boot_disableWatchdog
-0000f870  ti_catalog_msp430_init_Boot_init           
+0000f948  ti_catalog_msp430_init_Boot_disableWatchdog
+0000f90c  ti_catalog_msp430_init_Boot_init           
 00000000  xdc_runtime_Startup__EXECFXN__C            
 00000001  xdc_runtime_Startup__RESETFXN__C           
 00000000  xdc_runtime_Startup_exec__E                
-0000f870  xdc_runtime_Startup_reset__I               
+0000f90c  xdc_runtime_Startup_reset__I               
 
 
 GLOBAL SYMBOLS: SORTED BY Symbol Address 
@@ -1732,120 +1746,127 @@ address   name
 0000ec6a  measureTMP112                              
 0000ecfe  measureLight                               
 0000ed8e  __mspabi_cvtdf                             
-0000ee1a  calculateLight                             
-0000ee98  PinMux_graceInit                           
-0000ef0e  __mspabi_fltuld                            
-0000ef84  _Dunscale                                  
-0000eff6  _auto_init_hold_wdt                        
-0000f0ce  CS_initClockSignal                         
-0000f134  __mspabi_fixdli                            
-0000f19a  __mspabi_cvtfd                             
-0000f1fe  EUSCI_B_I2C_initMaster                     
-0000f25e  EUSCI_B_I2C_masterSendSingleByte           
-0000f2ba  __mspabi_divul                             
-0000f2ba  __mspabi_remul                             
-0000f312  calculateTMP112                            
-0000f362  measureSensors                             
-0000f3a4  EUSCI_B_I2C_masterSendMultiByteStart       
-0000f3e4  __mspabi_sral_15                           
-0000f3e8  __mspabi_sral_14                           
-0000f3ec  __mspabi_sral_13                           
-0000f3f0  __mspabi_sral_12                           
-0000f3f4  __mspabi_sral_11                           
-0000f3f8  __mspabi_sral_10                           
-0000f3fc  __mspabi_sral_9                            
-0000f400  __mspabi_sral_8                            
-0000f404  __mspabi_sral_7                            
-0000f408  __mspabi_sral_6                            
-0000f40c  __mspabi_sral_5                            
-0000f410  __mspabi_sral_4                            
-0000f414  __mspabi_sral_3                            
-0000f418  __mspabi_sral_2                            
-0000f41c  __mspabi_sral_1                            
-0000f422  __mspabi_slll_15                           
-0000f426  __mspabi_slll_14                           
-0000f42a  __mspabi_slll_13                           
-0000f42e  __mspabi_slll_12                           
-0000f432  __mspabi_slll_11                           
-0000f436  __mspabi_slll_10                           
-0000f43a  __mspabi_slll_9                            
-0000f43e  __mspabi_slll_8                            
-0000f442  __mspabi_slll_7                            
-0000f446  __mspabi_slll_6                            
-0000f44a  __mspabi_slll_5                            
-0000f44e  __mspabi_slll_4                            
-0000f452  __mspabi_slll_3                            
-0000f456  __mspabi_slll_2                            
-0000f45a  __mspabi_slll_1                            
-0000f460  __mspabi_srll_15                           
-0000f464  __mspabi_srll_14                           
-0000f468  __mspabi_srll_13                           
-0000f46c  __mspabi_srll_12                           
-0000f470  __mspabi_srll_11                           
-0000f474  __mspabi_srll_10                           
-0000f478  __mspabi_srll_9                            
-0000f47c  __mspabi_srll_8                            
-0000f480  __mspabi_srll_7                            
-0000f484  __mspabi_srll_6                            
-0000f488  __mspabi_srll_5                            
-0000f48c  __mspabi_srll_4                            
-0000f490  __mspabi_srll_3                            
-0000f494  __mspabi_srll_2                            
-0000f498  __mspabi_srll_1                            
-0000f49e  CS_graceInit                               
-0000f4d6  signal                                     
-0000f50e  _Feraise                                   
-0000f544  feraiseexcept                              
-0000f578  __mspabi_subd                              
-0000f5aa  raise                                      
-0000f5dc  CS_clearAllOscFlagsWithTimeout             
-0000f60a  __mspabi_negd                              
-0000f638  __mspabi_fixdi                             
-0000f660  _c_int00_noargs_noexit                     
-0000f686  EUSCI_B_I2C_masterReceiveMultiByteFinish   
-0000f6aa  __TI_zero_init                             
-0000f6ce  __mspabi_fltuf                             
-0000f6f2  EUSCI_B_I2C_masterReceiveSingleByte        
-0000f714  Grace_init                                 
-0000f736  __mspabi_mpyl_f5hw                         
-0000f758  WDT_A_hold                                 
-0000f778  __mspabi_mpyi_f5hw                         
-0000f78e  main                                       
-0000f7a2  memcpy                                     
-0000f7b6  CS_setDCOFreq                              
-0000f7c8  __TI_decompress_none                       
-0000f7da  __mspabi_sral                              
-0000f7ea  __mspabi_slll                              
-0000f7fa  __mspabi_srll                              
-0000f80a  EUSCI_B_I2C_setMode                        
-0000f818  log                                        
-0000f834  EUSCI_B_I2C_disableInterrupt               
-0000f840  EUSCI_B_I2C_isBusBusy                      
-0000f84c  EUSCI_B_I2C_masterReceiveStart             
-0000f858  EUSCI_B_I2C_setSlaveAddress                
-0000f864  __mspabi_fltid                             
-0000f870  ti_catalog_msp430_init_Boot_init           
-0000f870  xdc_runtime_Startup_reset__I               
-0000f87a  EUSCI_B_I2C_masterReceiveMultiByteNext     
-0000f884  WDT_A_graceInit                            
-0000f88e  __mspabi_negf                              
-0000f898  __mspabi_slli                              
-0000f8a2  __mspabi_srli                              
-0000f8ac  ti_catalog_msp430_init_Boot_disableWatchdog
-0000f8b4  EUSCI_B_I2C_masterIsStartSent              
-0000f8bc  EUSCI_B_I2C_masterIsStopSent               
-0000f8c4  System_graceInit                           
-0000f8cc  EUSCI_B_I2C_disable                        
-0000f8d2  EUSCI_B_I2C_enable                         
-0000f8d8  EUSCI_B_I2C_masterReceiveMultiByteStop     
-0000f8de  __mspabi_fltud                             
-0000f8e4  __TI_ISR_TRAP                              
-0000f8ea  __TI_decompress_rle24                      
-0000f8f0  _system_pre_init                           
-0000f8f4  C$$EXIT                                    
-0000f8f4  abort                                      
-0000f8f8  InterruptVectors_graceInit                 
-0000f8fa  _nop                                       
+0000ee1a  PinMux_graceInit                           
+0000ee98  calculateLight                             
+0000ef16  __mspabi_fltuld                            
+0000ef8c  _Dunscale                                  
+0000effe  _auto_init_hold_wdt                        
+0000f0d6  CS_initClockSignal                         
+0000f13c  __mspabi_fixdli                            
+0000f1a2  __mspabi_cvtfd                             
+0000f206  EUSCI_B_I2C_initMaster                     
+0000f266  EUSCI_B_I2C_masterSendSingleByte           
+0000f2c2  __mspabi_divul                             
+0000f2c2  __mspabi_remul                             
+0000f31a  calculateTMP112                            
+0000f36a  ADC10_B_init                               
+0000f3b6  measureSensors                             
+0000f3f8  EUSCI_B_I2C_masterSendMultiByteStart       
+0000f438  __mspabi_sral_15                           
+0000f43c  __mspabi_sral_14                           
+0000f440  __mspabi_sral_13                           
+0000f444  __mspabi_sral_12                           
+0000f448  __mspabi_sral_11                           
+0000f44c  __mspabi_sral_10                           
+0000f450  __mspabi_sral_9                            
+0000f454  __mspabi_sral_8                            
+0000f458  __mspabi_sral_7                            
+0000f45c  __mspabi_sral_6                            
+0000f460  __mspabi_sral_5                            
+0000f464  __mspabi_sral_4                            
+0000f468  __mspabi_sral_3                            
+0000f46c  __mspabi_sral_2                            
+0000f470  __mspabi_sral_1                            
+0000f476  __mspabi_slll_15                           
+0000f47a  __mspabi_slll_14                           
+0000f47e  __mspabi_slll_13                           
+0000f482  __mspabi_slll_12                           
+0000f486  __mspabi_slll_11                           
+0000f48a  __mspabi_slll_10                           
+0000f48e  __mspabi_slll_9                            
+0000f492  __mspabi_slll_8                            
+0000f496  __mspabi_slll_7                            
+0000f49a  __mspabi_slll_6                            
+0000f49e  __mspabi_slll_5                            
+0000f4a2  __mspabi_slll_4                            
+0000f4a6  __mspabi_slll_3                            
+0000f4aa  __mspabi_slll_2                            
+0000f4ae  __mspabi_slll_1                            
+0000f4b4  __mspabi_srll_15                           
+0000f4b8  __mspabi_srll_14                           
+0000f4bc  __mspabi_srll_13                           
+0000f4c0  __mspabi_srll_12                           
+0000f4c4  __mspabi_srll_11                           
+0000f4c8  __mspabi_srll_10                           
+0000f4cc  __mspabi_srll_9                            
+0000f4d0  __mspabi_srll_8                            
+0000f4d4  __mspabi_srll_7                            
+0000f4d8  __mspabi_srll_6                            
+0000f4dc  __mspabi_srll_5                            
+0000f4e0  __mspabi_srll_4                            
+0000f4e4  __mspabi_srll_3                            
+0000f4e8  __mspabi_srll_2                            
+0000f4ec  __mspabi_srll_1                            
+0000f4f2  CS_graceInit                               
+0000f52a  signal                                     
+0000f562  _Feraise                                   
+0000f598  feraiseexcept                              
+0000f5cc  __mspabi_subd                              
+0000f5fe  raise                                      
+0000f630  CS_clearAllOscFlagsWithTimeout             
+0000f65e  __mspabi_negd                              
+0000f68c  Grace_init                                 
+0000f6b6  __mspabi_fixdi                             
+0000f6de  _c_int00_noargs_noexit                     
+0000f704  EUSCI_B_I2C_masterReceiveMultiByteFinish   
+0000f728  __TI_zero_init                             
+0000f74c  __mspabi_fltuf                             
+0000f770  EUSCI_B_I2C_masterReceiveSingleByte        
+0000f792  __mspabi_mpyl_f5hw                         
+0000f7b4  WDT_A_hold                                 
+0000f7d4  REF_graceInit                              
+0000f7f0  ADC10_B_graceInit                          
+0000f808  __mspabi_mpyi_f5hw                         
+0000f81e  main                                       
+0000f832  memcpy                                     
+0000f846  CS_setDCOFreq                              
+0000f858  __TI_decompress_none                       
+0000f86a  __mspabi_sral                              
+0000f87a  __mspabi_slll                              
+0000f88a  __mspabi_srll                              
+0000f89a  EUSCI_B_I2C_setMode                        
+0000f8a8  log                                        
+0000f8c4  EUSCI_B_I2C_disableInterrupt               
+0000f8d0  EUSCI_B_I2C_isBusBusy                      
+0000f8dc  EUSCI_B_I2C_masterReceiveStart             
+0000f8e8  EUSCI_B_I2C_setSlaveAddress                
+0000f8f4  Ref_setReferenceVoltage                    
+0000f900  __mspabi_fltid                             
+0000f90c  ti_catalog_msp430_init_Boot_init           
+0000f90c  xdc_runtime_Startup_reset__I               
+0000f916  EUSCI_B_I2C_masterReceiveMultiByteNext     
+0000f920  WDT_A_graceInit                            
+0000f92a  __mspabi_negf                              
+0000f934  __mspabi_slli                              
+0000f93e  __mspabi_srli                              
+0000f948  ti_catalog_msp430_init_Boot_disableWatchdog
+0000f950  ADC10_B_disable                            
+0000f958  EUSCI_B_I2C_masterIsStartSent              
+0000f960  EUSCI_B_I2C_masterIsStopSent               
+0000f968  System_graceInit                           
+0000f970  EUSCI_B_I2C_disable                        
+0000f976  EUSCI_B_I2C_enable                         
+0000f97c  EUSCI_B_I2C_masterReceiveMultiByteStop     
+0000f982  Ref_disableTempSensor                      
+0000f988  Ref_enableReferenceVoltage                 
+0000f98e  __mspabi_fltud                             
+0000f994  __TI_ISR_TRAP                              
+0000f99a  __TI_decompress_rle24                      
+0000f9a0  _system_pre_init                           
+0000f9a4  C$$EXIT                                    
+0000f9a4  abort                                      
+0000f9a8  InterruptVectors_graceInit                 
+0000f9aa  _nop                                       
 0000ffce  __TI_int31                                 
 0000ffd0  __TI_int32                                 
 0000ffd2  __TI_int33                                 
@@ -1877,4 +1898,4 @@ ffffffff  binit
 UNDEFED   __TI_INITARRAY_Base                        
 UNDEFED   __TI_INITARRAY_Limit                       
 
-[763 symbols]
+[770 symbols]

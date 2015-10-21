@@ -44,6 +44,12 @@ void Grace_init(void)
     /* initialize Config for the MSP430 EUSCI_B0 */
     EUSCI_B0_graceInit();
 
+    /* initialize Config for the MSP430 10-bit Analog to Digital Converter (ADC) */
+    ADC10_B_graceInit();
+
+    /* initialize Config for the MSP430 Reference Module (REF) */
+    REF_graceInit();
+
     /* initialize Interrupt vector support */
     InterruptVectors_graceInit();
 

@@ -163,6 +163,17 @@ Void ti_catalog_msp430_init_Boot_init(Void)
 /* EUSCI stuff from C:/ti/grace_3_10_00_82/packages/ti/mcu/msp430/csl2/communication/./EUSCI.xdt */
 
 /*
+ * ======== ti.mcu.msp430.csl2.adc.ADC10_B TEMPLATE ========
+ */
+
+/* ADC10 stuff from C:/ti/grace_3_10_00_82/packages/ti/mcu/msp430/csl2/adc/./ADC10_B.xdt */
+
+/*
+ * ======== ti.mcu.msp430.csl2.ref.REF TEMPLATE ========
+ */
+
+
+/*
  * ======== ti.mcu.msp430.csl2.clock.CS TEMPLATE ========
  */
 
