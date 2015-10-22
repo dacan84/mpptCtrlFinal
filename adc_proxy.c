@@ -14,7 +14,7 @@ DecimalVoltages adquisitionVoltages (void){
 		DecimalVoltages decimalVoltages;
 		float voltageReference;
 
-		voltageReference = voltageReferenceSelector(REF_VREF1_5V);
+		voltageReference = voltageReferenceSelector(REF_VREF2_5V);
 		measureVoltages(&binaryVoltages);
 		voltagesCalculation(&binaryVoltages,&decimalVoltages,&voltageReference);
 		return decimalVoltages;

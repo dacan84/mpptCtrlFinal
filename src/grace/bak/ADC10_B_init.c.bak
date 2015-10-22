@@ -39,8 +39,35 @@ void ADC10_B_graceInit(void)
     /* Initializes ADC10_B */
     ADC10_B_init(ADC10_B_BASE, ADC10_B_SAMPLEHOLDSOURCE_SC, ADC10_B_CLOCKSOURCE_ADC10OSC, ADC10_B_CLOCKDIVIDER_1);
 
-    /* Disables ADC10_B */
-    ADC10_B_disable(ADC10_B_BASE);
+    /* Enables ADC10_B */
+    ADC10_B_enable(ADC10_B_BASE);
+
+    /* Sets up and enables the Sampling Timer Pulse Mode */
+    ADC10_B_setupSamplingTimer(ADC10_B_BASE, ADC10_B_CYCLEHOLD_8_CYCLES, ADC10_B_MULTIPLESAMPLESDISABLE);
+
+    /* Configures the controls of the selected memory buffer */
+    ADC10_B_configureMemory(ADC10_B_BASE, ADC10_B_INPUT_A0, ADC10_B_VREFPOS_AVCC, ADC10_B_VREFNEG_AVSS);
+
+    /* Inverts/Uninverts the sample/hold signal */
+    ADC10_B_setSampleHoldSignalInversion(ADC10_B_BASE, ADC10_B_NONINVERTEDSIGNAL);
+
+    /* Sets the read-back format of the converted data */
+    ADC10_B_setDataReadBackFormat(ADC10_B_BASE, ADC10_B_UNSIGNED_BINARY);
+
+    /* Sets the reference buffer's sampling rate */
+    ADC10_B_setReferenceBufferSamplingRate(ADC10_B_BASE, ADC10_B_MAXSAMPLINGRATE_200KSPS);
+
+    /* Disables interrupt ADC10IE0 */
+    ADC10_B_disableInterrupt(ADC10_B_BASE, ADC10IE0);
+
+    /* Disables interrupt ADC10HIIE */
+    ADC10_B_disableInterrupt(ADC10_B_BASE, ADC10HIIE);
+
+    /* Disables interrupt ADC10LOIE */
+    ADC10_B_disableInterrupt(ADC10_B_BASE, ADC10LOIE);
+
+    /* Disables interrupt ADC10INIE */
+    ADC10_B_disableInterrupt(ADC10_B_BASE, ADC10INIE);
 
     /* USER CODE START (section: ADC10_B_graceInit_epilogue) */
     /* User code */
