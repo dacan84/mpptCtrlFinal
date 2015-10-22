@@ -3,25 +3,16 @@
 
 #include <msp430.h>
 #include <intrinsics.h>
+#include "../typedefs.h"
 
 #define ADC_RESOLUTION 1024
 
-typedef struct {
-	uint16_t supplyVoltage;
-	uint16_t superCapCharge;
-	uint16_t pvOperationVoltage;
-} VoltageMeasures;
+float voltageReferenceSelector(uint8_t vRef);
 
-typedef struct {
-	float supplyVoltage;
-	float superCapCharge;
-	float pvOperationVoltage;
-} CalculateVoltages;
+void measureVoltages(BinaryVoltages *binaryVoltages);
 
-
-VoltageMeasures measureVoltages (void);
-
-CalculateVoltages voltagesCalculation (VoltageMeasures voltageMeasures);
+void voltagesCalculation(BinaryVoltages *binaryVoltages,
+		DecimalVoltages *decimalVoltages, float *voltageReference);
 
 #endif
 

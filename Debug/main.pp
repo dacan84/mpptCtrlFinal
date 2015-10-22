@@ -16,6 +16,7 @@ main.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/include/_lock.h
 main.obj: ../temperature_tmp112/../typedefs.h
 main.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/include/stdint.h
 main.obj: ../sensor_proxy.h
+main.obj: ../adc_proxy.h
 
 ../main.c: 
 C:/ti/ccsv6/ccs_base/msp430/include/msp430.h: 
@@ -33,3 +34,4 @@ C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/include/_lock.h:
 ../temperature_tmp112/../typedefs.h: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/include/stdint.h: 
 ../sensor_proxy.h: 
+../adc_proxy.h: 

@@ -7,6 +7,7 @@ SHELL = cmd.exe
 CG_TOOL_ROOT := C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3
 
 ORDERED_OBJS += \
+"./adc_proxy.obj" \
 "./main.obj" \
 "./sensor_proxy.obj" \
 "./temperature_tmp112/TMP112_I2C_temperature_sensor.obj" \
@@ -158,8 +159,8 @@ mpptCtrlFinal.hex: $(EXE_OUTPUTS)
 clean:
 	-$(RM) $(GEN_MISC_FILES__QUOTED)$(EXE_OUTPUTS__QUOTED)$(GEN_FILES__QUOTED)$(BIN_OUTPUTS__QUOTED)$(GEN_OPTS__QUOTED)$(GEN_CMDS__QUOTED)
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)
-	-$(RM) "main.pp" "sensor_proxy.pp" "temperature_tmp112\TMP112_I2C_temperature_sensor.pp" "light_MAX44009\light_sensor_MAX44009.pp" "adc\averaged_adc.pp" 
-	-$(RM) "main.obj" "sensor_proxy.obj" "temperature_tmp112\TMP112_I2C_temperature_sensor.obj" "light_MAX44009\light_sensor_MAX44009.obj" "adc\averaged_adc.obj" 
+	-$(RM) "adc_proxy.pp" "main.pp" "sensor_proxy.pp" "temperature_tmp112\TMP112_I2C_temperature_sensor.pp" "light_MAX44009\light_sensor_MAX44009.pp" "adc\averaged_adc.pp" 
+	-$(RM) "adc_proxy.obj" "main.obj" "sensor_proxy.obj" "temperature_tmp112\TMP112_I2C_temperature_sensor.obj" "light_MAX44009\light_sensor_MAX44009.obj" "adc\averaged_adc.obj" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

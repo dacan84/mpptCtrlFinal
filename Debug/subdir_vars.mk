@@ -10,14 +10,17 @@ CFG_SRCS += \
 ../main.cfg 
 
 C_SRCS += \
+../adc_proxy.c \
 ../main.c \
 ../sensor_proxy.c 
 
 OBJS += \
+./adc_proxy.obj \
 ./main.obj \
 ./sensor_proxy.obj 
 
 C_DEPS += \
+./adc_proxy.pp \
 ./main.pp \
 ./sensor_proxy.pp 
 
@@ -42,14 +45,17 @@ GEN_MISC_DIRS__QUOTED += \
 "configPkg\" 
 
 C_DEPS__QUOTED += \
+"adc_proxy.pp" \
 "main.pp" \
 "sensor_proxy.pp" 
 
 OBJS__QUOTED += \
+"adc_proxy.obj" \
 "main.obj" \
 "sensor_proxy.obj" 
 
 C_SRCS__QUOTED += \
+"../adc_proxy.c" \
 "../main.c" \
 "../sensor_proxy.c" 
 

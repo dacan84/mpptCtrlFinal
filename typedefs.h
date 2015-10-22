@@ -20,4 +20,17 @@ typedef struct  {
 } floatBytes;
 
 
+typedef struct {
+	uint16_t supplyVoltage;
+	uint16_t superCapCharge;
+	uint16_t pvOperationVoltage;
+} BinaryVoltages;
+
+typedef struct {
+	float supplyVoltage;
+	float superCapCharge;
+	float pvOperationVoltage;
+} DecimalVoltages;
+
+
 #endif /* TYPEDEFS_H_ */

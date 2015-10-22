@@ -9,11 +9,15 @@
 #include <ti/mcu/msp430/Grace.h>
 #include "temperature_tmp112/TMP112_I2C_temperature_sensor.h"
 #include "sensor_proxy.h"
+#include "adc_proxy.h"
+#include "typedefs.h"
+
 /*
  *  ======== main ========
  */
 
 float light, temperature;
+DecimalVoltages voltages;
 
 int main(void) {
 	Grace_init();                   // Activate Grace-generated configuration
@@ -23,6 +27,7 @@ int main(void) {
 
 	while (1) {
 		measureSensors(&light,&temperature);
+		voltages = adquisitionVoltages();
 	}
 
 }
