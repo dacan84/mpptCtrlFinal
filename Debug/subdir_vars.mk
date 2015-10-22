@@ -11,17 +11,23 @@ CFG_SRCS += \
 
 C_SRCS += \
 ../adc_proxy.c \
+../ann_proxy.c \
 ../main.c \
+../mppt_ctrl.c \
 ../sensor_proxy.c 
 
 OBJS += \
 ./adc_proxy.obj \
+./ann_proxy.obj \
 ./main.obj \
+./mppt_ctrl.obj \
 ./sensor_proxy.obj 
 
 C_DEPS += \
 ./adc_proxy.pp \
+./ann_proxy.pp \
 ./main.pp \
+./mppt_ctrl.pp \
 ./sensor_proxy.pp 
 
 GEN_MISC_DIRS += \
@@ -46,17 +52,23 @@ GEN_MISC_DIRS__QUOTED += \
 
 C_DEPS__QUOTED += \
 "adc_proxy.pp" \
+"ann_proxy.pp" \
 "main.pp" \
+"mppt_ctrl.pp" \
 "sensor_proxy.pp" 
 
 OBJS__QUOTED += \
 "adc_proxy.obj" \
+"ann_proxy.obj" \
 "main.obj" \
+"mppt_ctrl.obj" \
 "sensor_proxy.obj" 
 
 C_SRCS__QUOTED += \
 "../adc_proxy.c" \
+"../ann_proxy.c" \
 "../main.c" \
+"../mppt_ctrl.c" \
 "../sensor_proxy.c" 
 
 GEN_CMDS__FLAG += \

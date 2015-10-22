@@ -123,5 +123,6 @@ SUBDIRS := \
 . \
 temperature_tmp112 \
 light_MAX44009 \
+ann_PV \
 adc \
 

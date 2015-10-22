@@ -8,10 +8,13 @@ CG_TOOL_ROOT := C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3
 
 ORDERED_OBJS += \
 "./adc_proxy.obj" \
+"./ann_proxy.obj" \
 "./main.obj" \
+"./mppt_ctrl.obj" \
 "./sensor_proxy.obj" \
 "./temperature_tmp112/TMP112_I2C_temperature_sensor.obj" \
 "./light_MAX44009/light_sensor_MAX44009.obj" \
+"./ann_PV/ANN_implementation.obj" \
 "./adc/averaged_adc.obj" \
 "../lnk_msp430fr5739.cmd" \
 $(GEN_CMDS__FLAG) \
@@ -28,10 +31,12 @@ RMDIR := RMDIR /S/Q
 -include subdir_vars.mk
 -include temperature_tmp112/subdir_vars.mk
 -include light_MAX44009/subdir_vars.mk
+-include ann_PV/subdir_vars.mk
 -include adc/subdir_vars.mk
 -include subdir_rules.mk
 -include temperature_tmp112/subdir_rules.mk
 -include light_MAX44009/subdir_rules.mk
+-include ann_PV/subdir_rules.mk
 -include adc/subdir_rules.mk
 -include objects.mk
 
@@ -159,8 +164,8 @@ mpptCtrlFinal.hex: $(EXE_OUTPUTS)
 clean:
 	-$(RM) $(GEN_MISC_FILES__QUOTED)$(EXE_OUTPUTS__QUOTED)$(GEN_FILES__QUOTED)$(BIN_OUTPUTS__QUOTED)$(GEN_OPTS__QUOTED)$(GEN_CMDS__QUOTED)
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)
-	-$(RM) "adc_proxy.pp" "main.pp" "sensor_proxy.pp" "temperature_tmp112\TMP112_I2C_temperature_sensor.pp" "light_MAX44009\light_sensor_MAX44009.pp" "adc\averaged_adc.pp" 
-	-$(RM) "adc_proxy.obj" "main.obj" "sensor_proxy.obj" "temperature_tmp112\TMP112_I2C_temperature_sensor.obj" "light_MAX44009\light_sensor_MAX44009.obj" "adc\averaged_adc.obj" 
+	-$(RM) "adc_proxy.pp" "ann_proxy.pp" "main.pp" "mppt_ctrl.pp" "sensor_proxy.pp" "temperature_tmp112\TMP112_I2C_temperature_sensor.pp" "light_MAX44009\light_sensor_MAX44009.pp" "ann_PV\ANN_implementation.pp" "adc\averaged_adc.pp" 
+	-$(RM) "adc_proxy.obj" "ann_proxy.obj" "main.obj" "mppt_ctrl.obj" "sensor_proxy.obj" "temperature_tmp112\TMP112_I2C_temperature_sensor.obj" "light_MAX44009\light_sensor_MAX44009.obj" "ann_PV\ANN_implementation.obj" "adc\averaged_adc.obj" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

@@ -17,7 +17,7 @@ static uint16_t voltageAdquisitionMeasure(uint8_t channel) {
 
 	ADC10_B_startConversion(ADC10_B_BASE, ADC10_B_SINGLECHANNEL);
 	while (ADC10_B_isBusy(ADC10_B_BASE) == ADC10_B_BUSY)
-		;
+
 	voltage = ADC10_B_getResults(ADC10_B_BASE);
 
 	return voltage;
