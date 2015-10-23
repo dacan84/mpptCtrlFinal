@@ -13,7 +13,6 @@
 	#define NETWORK21
 	#define ANN2LAYERS
 
-
 	#define FILAS_INPUTS		3
 	#define COLUMNAS_INPUTS		1
 

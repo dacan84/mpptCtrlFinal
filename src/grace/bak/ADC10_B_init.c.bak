@@ -46,7 +46,7 @@ void ADC10_B_graceInit(void)
     ADC10_B_setupSamplingTimer(ADC10_B_BASE, ADC10_B_CYCLEHOLD_8_CYCLES, ADC10_B_MULTIPLESAMPLESDISABLE);
 
     /* Configures the controls of the selected memory buffer */
-    ADC10_B_configureMemory(ADC10_B_BASE, ADC10_B_INPUT_A0, ADC10_B_VREFPOS_AVCC, ADC10_B_VREFNEG_AVSS);
+    ADC10_B_configureMemory(ADC10_B_BASE, ADC10_B_INPUT_A0, ADC10_B_VREFPOS_INT, ADC10_B_VREFNEG_AVSS);
 
     /* Inverts/Uninverts the sample/hold signal */
     ADC10_B_setSampleHoldSignalInversion(ADC10_B_BASE, ADC10_B_NONINVERTEDSIGNAL);

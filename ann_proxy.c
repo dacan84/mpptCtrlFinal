@@ -12,8 +12,7 @@
 
 float calculateVref (void) {
 	AnnInputData data, dataN;
-	//FIXME: en principio devuelve el valor ya estandarizado (desnormalizado) de tensión.
-	//float VrefN;
+
 	float vRef;
 
 	measureSensors(&data);

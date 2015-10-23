@@ -24,7 +24,7 @@
 								<listOptionValue builtIn="false" value="RUNTIME_SUPPORT_LIBRARY=libc.a"/>
 								<listOptionValue builtIn="false" value="RTSC_MBS_VERSION=2.2.0"/>
 								<listOptionValue builtIn="false" value="XDC_VERSION=3.31.1.33_core"/>
-								<listOptionValue builtIn="false" value="RTSC_PRODUCTS=com.ti.sdo.grace:3.10.0.82;com.ti.mcu.msp430.driverlib:2.21.0.08;"/>
+								<listOptionValue builtIn="false" value="RTSC_PRODUCTS=com.ti.mcu.msp.framutilities:1.0.0.24;com.ti.sdo.grace:3.10.0.82;com.ti.mcu.msp430.driverlib:2.21.0.08;"/>
 								<listOptionValue builtIn="false" value="EXPANDED_REPOS="/>
 								<listOptionValue builtIn="false" value="OUTPUT_TYPE=rtscApplication:executable"/>
 								<listOptionValue builtIn="false" value="MPU_OPTION__LINKER=enabled:false;"/>
@@ -54,6 +54,8 @@
 									<listOptionValue builtIn="false" value="&quot;${CG_TOOL_ROOT}/include&quot;"/>
 								</option>
 								<option id="com.ti.ccstudio.buildDefinitions.MSP430_4.4.compilerID.ABI.887112160" name="Application binary interface [See 'General' page to edit] (--abi)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_4.4.compilerID.ABI" value="com.ti.ccstudio.buildDefinitions.MSP430_4.4.compilerID.ABI.eabi" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.MSP430_4.4.compilerID.FLOAT_OPERATIONS_ALLOWED.109462869" name="Floating point precision accepted by compiler (--float_operations_allowed)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_4.4.compilerID.FLOAT_OPERATIONS_ALLOWED" value="com.ti.ccstudio.buildDefinitions.MSP430_4.4.compilerID.FLOAT_OPERATIONS_ALLOWED.all" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.MSP430_4.4.compilerID.OPT_FOR_SPEED.1452947784" superClass="com.ti.ccstudio.buildDefinitions.MSP430_4.4.compilerID.OPT_FOR_SPEED" value="com.ti.ccstudio.buildDefinitions.MSP430_4.4.compilerID.OPT_FOR_SPEED.5" valueType="enumerated"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.MSP430_4.4.compiler.inputType__C_SRCS.330736958" name="C Sources" superClass="com.ti.ccstudio.buildDefinitions.MSP430_4.4.compiler.inputType__C_SRCS"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.MSP430_4.4.compiler.inputType__CPP_SRCS.878515450" name="C++ Sources" superClass="com.ti.ccstudio.buildDefinitions.MSP430_4.4.compiler.inputType__CPP_SRCS"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.MSP430_4.4.compiler.inputType__ASM_SRCS.1755704661" name="Assembly Sources" superClass="com.ti.ccstudio.buildDefinitions.MSP430_4.4.compiler.inputType__ASM_SRCS"/>
@@ -61,6 +63,7 @@
 							</tool>
 							<tool id="com.ti.ccstudio.buildDefinitions.MSP430_4.4.exe.linkerDebug.1856789614" name="MSP430 Linker" superClass="com.ti.ccstudio.buildDefinitions.MSP430_4.4.exe.linkerDebug">
 								<option id="com.ti.ccstudio.buildDefinitions.MSP430_4.4.linkerID.LIBRARY.1425350903" name="Include library file or command file as input (--library, -l)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_4.4.linkerID.LIBRARY" valueType="libs">
+									<listOptionValue builtIn="false" value=""/>
 									<listOptionValue builtIn="false" value="&quot;libmath.a&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;libc.a&quot;"/>
 								</option>
@@ -79,6 +82,7 @@
 								<option id="com.ti.ccstudio.buildDefinitions.MSP430_4.4.linkerID.XML_LINK_INFO.1845891520" name="Detailed link information data-base into &lt;file&gt; (--xml_link_info, -xml_link_info)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_4.4.linkerID.XML_LINK_INFO" value="&quot;${ProjName}_linkInfo.xml&quot;" valueType="string"/>
 								<option id="com.ti.ccstudio.buildDefinitions.MSP430_4.4.linkerID.DISPLAY_ERROR_NUMBER.421282451" name="Emit diagnostic identifier numbers (--display_error_number)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_4.4.linkerID.DISPLAY_ERROR_NUMBER" value="true" valueType="boolean"/>
 								<option id="com.ti.ccstudio.buildDefinitions.MSP430_4.4.linkerID.DIAG_WRAP.144003446" name="Wrap diagnostic messages (--diag_wrap)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_4.4.linkerID.DIAG_WRAP" value="com.ti.ccstudio.buildDefinitions.MSP430_4.4.linkerID.DIAG_WRAP.off" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.MSP430_4.4.linkerID.DEFINE.106765933" name="Pre-define preprocessor macro _name_ to _value_ (--define)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_4.4.linkerID.DEFINE" valueType="definedSymbols"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.MSP430_4.4.exeLinker.inputType__CMD_SRCS.1158928194" name="Linker Command Files" superClass="com.ti.ccstudio.buildDefinitions.MSP430_4.4.exeLinker.inputType__CMD_SRCS"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.MSP430_4.4.exeLinker.inputType__CMD2_SRCS.437029199" name="Linker Command Files" superClass="com.ti.ccstudio.buildDefinitions.MSP430_4.4.exeLinker.inputType__CMD2_SRCS"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.MSP430_4.4.exeLinker.inputType__GEN_CMDS.90164493" name="Generated Linker Command Files" superClass="com.ti.ccstudio.buildDefinitions.MSP430_4.4.exeLinker.inputType__GEN_CMDS"/>
@@ -94,10 +98,12 @@
 								<option id="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.PLATFORM_RAW.180838548" name="Platform (-p)" superClass="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.PLATFORM_RAW" value="ti.platforms.msp430:$DeviceId$" valueType="string"/>
 								<option id="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.BUILD_PROFILE.1777274761" name="Build-profile (-r)" superClass="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.BUILD_PROFILE" value="debug" valueType="string"/>
 								<option id="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.XDC_PATH.1212021101" name="Package repositories (--xdcpath)" superClass="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.XDC_PATH" valueType="stringList">
-									<listOptionValue builtIn="false" value="${COM_TI_SDO_GRACE_INSTALL_DIR}/packages"/>
-									<listOptionValue builtIn="false" value="${MSP430_DRIVERLIB_ROOT}/packages"/>
-									<listOptionValue builtIn="false" value="${MSP430_DRIVERLIB_ROOT}/."/>
-									<listOptionValue builtIn="false" value="${TARGET_CONTENT_BASE}"/>
+									<listOptionValue builtIn="false" value="&quot;${COM_TI_SDO_GRACE_INSTALL_DIR}/packages&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MSP430_DRIVERLIB_ROOT}/packages&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MSP430_DRIVERLIB_ROOT}/.&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${FRAM_UTILITIES}/packages&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${FRAM_UTILITIES}/.&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${TARGET_CONTENT_BASE}&quot;"/>
 								</option>
 								<option id="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.JAVA_PROPERTIES.480660295" name="Java properties (-D)" superClass="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.JAVA_PROPERTIES" valueType="stringList">
 									<listOptionValue builtIn="false" value="xdc.cfg.tsort.policy=fast"/>

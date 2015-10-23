@@ -39,8 +39,8 @@ mppt_ctrl.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/
 mppt_ctrl.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/timer_b.h
 mppt_ctrl.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/tlv.h
 mppt_ctrl.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/wdt_a.h
-mppt_ctrl.obj: ../adc/averaged_adc.h
-mppt_ctrl.obj: ../adc/../typedefs.h
+mppt_ctrl.obj: ../adc_proxy.h
+mppt_ctrl.obj: ../typedefs.h
 
 ../mppt_ctrl.c: 
 ../mppt_ctrl.h: 
@@ -81,5 +81,5 @@ C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/timer_a.h:
 C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/timer_b.h: 
 C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/tlv.h: 
 C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/wdt_a.h: 
-../adc/averaged_adc.h: 
-../adc/../typedefs.h: 
+../adc_proxy.h: 
+../typedefs.h: 

@@ -12,5 +12,4 @@
 
 DecimalVoltages adquisitionVoltages (void);
 
-
 #endif /* ADC_PROXY_H_ */

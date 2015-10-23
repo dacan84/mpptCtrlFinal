@@ -39,9 +39,6 @@ light_MAX44009/light_sensor_MAX44009.obj: C:/ti/msp430/MSPWare_2_30_00_49/driver
 light_MAX44009/light_sensor_MAX44009.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/timer_b.h
 light_MAX44009/light_sensor_MAX44009.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/tlv.h
 light_MAX44009/light_sensor_MAX44009.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/wdt_a.h
-light_MAX44009/light_sensor_MAX44009.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/include/math.h
-light_MAX44009/light_sensor_MAX44009.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/include/ymath.h
-light_MAX44009/light_sensor_MAX44009.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/include/float.h
 
 ../light_MAX44009/light_sensor_MAX44009.c: 
 ../light_MAX44009/../light_MAX44009/light_sensor_MAX44009.h: 
@@ -82,6 +79,3 @@ C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/timer_a.h:
 C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/timer_b.h: 
 C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/tlv.h: 
 C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/wdt_a.h: 
-C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/include/math.h: 
-C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/include/ymath.h: 
-C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/include/float.h: 

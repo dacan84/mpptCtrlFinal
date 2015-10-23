@@ -17,7 +17,7 @@ typedef struct  {
 typedef struct  {
 	uint8_t mantissa;
 	uint8_t exponent;
-} floatBytes;
+} FloatBytes;
 
 
 typedef struct {

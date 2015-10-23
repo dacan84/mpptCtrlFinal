@@ -28,9 +28,7 @@ int main(void) {
 	//configTMP112();
 
 	while (1) {
-		MpptCtrl();
-		measureSensors(&enviromentalMeasures);
-		voltages = adquisitionVoltages();
+		mpptCtrl();
 	}
 
 }

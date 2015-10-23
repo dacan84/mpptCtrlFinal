@@ -8,6 +8,6 @@
 #ifndef MPPT_CTRL_H_
 #define MPPT_CTRL_H_
 
-	void MpptCtrl (void);
+	void mpptCtrl (void);
 
 #endif /* MPPT_CTRL_H_ */

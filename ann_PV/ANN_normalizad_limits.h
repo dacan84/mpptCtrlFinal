@@ -8,6 +8,7 @@
 #ifndef ANN_ANN_NORMALIZAD_LIMITS_H_
 #define ANN_ANN_NORMALIZAD_LIMITS_H_
 
+#pragma SET_DATA_SECTION(".fram_vars")
 /* Definir límites de normalización. */
 	/* Límites luz.*/
 	#define LIGHT_UPPER_LIMIT			100000
@@ -24,5 +25,6 @@
 	#define VMMP_REF_UPPER_LIMIT		0.74*5
 	#define VMMP_REF_LOWER_LIMIT		0.74*1.8
 
+#pragma SET_DATA_SECTION()
 
 #endif /* ANN_ANN_NORMALIZAD_LIMITS_H_ */

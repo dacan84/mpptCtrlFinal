@@ -5,12 +5,10 @@
  *      Author: Diego
  */
 
-#include <stdio.h>
 #include <stdint.h>
 #include "ANN_implementation.h"
 #include "ANN_memory_saving.h"
 #include "ANN_normalizad_limits.h"
-
 
 /* La matriz de salida constara de uno o 2 elementos. */
 //float output[1]; // La dimensión dependera del vector de salida.
@@ -183,7 +181,7 @@ float calculoANN2Layer(AnnInputData *dataN) {
 		}
 	}
 	clearArraysANN2Layer();
-	vRef = VoltrageReferenceDenormalized(vRefN); //TODO: esto igual sobra
+	vRef = VoltrageReferenceDenormalized(vRefN);
 	return (float) vRef;
 }
 #endif
@@ -212,10 +210,8 @@ static float CalTanh(float x) {
 }
 
 void normalizedInput (AnnInputData *input, AnnInputData *annInputsN) {
-
 		annInputsN->lux = (input->lux-LIGHT_LOWER_LIMIT)/(LIGHT_UPPER_LIMIT-LIGHT_LOWER_LIMIT);
 		annInputsN->temp = (input->temp-TEMPERATURE_LOWER_LIMIT)/(TEMPERATURE_UPPER_LIMIT-TEMPERATURE_LOWER_LIMIT);
-
 }
 
 //TODO: esta función, no se si me hará falta.

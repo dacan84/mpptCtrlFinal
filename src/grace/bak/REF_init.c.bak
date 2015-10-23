@@ -39,11 +39,11 @@ void REF_graceInit(void)
     /* Sets the reference voltage for the voltage generator */
     Ref_setReferenceVoltage(REF_BASE, REF_VREF1_5V);
 
-    /* Disables the reference voltage */
-    Ref_disableReferenceVoltage(REF_BASE);
+    /* Enables the reference voltage to be used by peripherals */
+    Ref_enableReferenceVoltage(REF_BASE);
 
-    /* Enables the internal temperature sensor */
-    Ref_enableTempSensor(REF_BASE);
+    /* Disables the internal temperature sensor to save power consumption */
+    Ref_disableTempSensor(REF_BASE);
 
     /* USER CODE START (section: REF_graceInit_epilogue) */
     /* User code */

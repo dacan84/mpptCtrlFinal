@@ -12,14 +12,7 @@
 typedef struct {
 	float	lux;
 	float	temp;
-//	float 	vref;
 } AnnInputData;
-
-/* Valores de entrada data class */
-//typedef struct {
-//float	luxN;
-//float	tempN;
-//} AnnNormalizeData;
 
 
 #endif /* ANNDATATYPE_H_ */

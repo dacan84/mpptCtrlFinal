@@ -198,7 +198,7 @@ __o = __obj[15]  // ti.targets.msp430.elf.MSP430X/ccConfigOpts
 __o = __obj[16]  // ti.targets.msp430.elf.MSP430X/ccOpts
     __o['$category'] = String(java.net.URLDecoder.decode('Struct', 'UTF-8'))
     __o['$name'] = String(java.net.URLDecoder.decode('ti.targets.msp430.elf.MSP430X%2FccOpts', 'UTF-8'))
-    __o['prefix'] = String(java.net.URLDecoder.decode('-vmspx+--abi%3Deabi+--use_hw_mpy%3DF5+--include_path%3D%22C%3A%2Fti%2Fccsv6%2Fccs_base%2Fmsp430%2Finclude%22+--include_path%3D%22C%3A%2Fti%2Fccsv6%2Ftools%2Fcompiler%2Fti-cgt-msp430_4.4.3%2Finclude%22+--advice%3Apower%3Dall+-g+--define%3D__MSP430FR5739__+--diag_warning%3D225+--display_error_number+--diag_wrap%3Doff+--silicon_errata%3DCPU21+--silicon_errata%3DCPU22+--silicon_errata%3DCPU40+--printf_support%3Dminimal+++-qq+-pdsw225', 'UTF-8'))
+    __o['prefix'] = String(java.net.URLDecoder.decode('-vmspx+--abi%3Deabi+--opt_for_speed%3D5+--use_hw_mpy%3DF5+--include_path%3D%22C%3A%2Fti%2Fccsv6%2Fccs_base%2Fmsp430%2Finclude%22+--include_path%3D%22C%3A%2Fti%2Fccsv6%2Ftools%2Fcompiler%2Fti-cgt-msp430_4.4.3%2Finclude%22+--advice%3Apower%3Dall+-g+--float_operations_allowed%3Dall+--define%3D__MSP430FR5739__+--diag_warning%3D225+--display_error_number+--diag_wrap%3Doff+--silicon_errata%3DCPU21+--silicon_errata%3DCPU22+--silicon_errata%3DCPU40+--printf_support%3Dminimal+++-qq+-pdsw225', 'UTF-8'))
     __o['suffix'] = String(java.net.URLDecoder.decode('', 'UTF-8'))
 
 __o = __obj[17]  // ti.targets.msp430.elf.MSP430X/compatibleSuffixes
