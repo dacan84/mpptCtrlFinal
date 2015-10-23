@@ -8,6 +8,6 @@
 #ifndef ANN_PROXY_H_
 #define ANN_PROXY_H_
 
-float CalculateVref (void);
+float calculateVref (void);
 
 #endif /* ANN_PROXY_H_ */

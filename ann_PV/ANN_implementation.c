@@ -7,13 +7,9 @@
 
 #include <stdio.h>
 #include <stdint.h>
-//#include <math.h>
 #include "ANN_implementation.h"
 #include "ANN_memory_saving.h"
 #include "ANN_normalizad_limits.h"
-//#include "../adc/averaged_adc.h"
-//#include "../sensores/Light.h"
-
 
 
 /* La matriz de salida constara de uno o 2 elementos. */
@@ -40,7 +36,7 @@ static void ClearArraysANN3Layer(void) {
 }
 
 /* La operacion tangente hipperbólica requiere variables float con la funcion declarada previamente*/
-float CalculoANN3Layer(AnnInputData dataN) {
+float CalculoANN3Layer(AnnInputData *dataN) {
 	uint8_t i, j, z;
 	/* La matriz de entrada esta compuesta por 3 elementos:
 	 * [el primer elemento corresponde al umbral, Luz, Temperatura]. */
@@ -49,8 +45,8 @@ float CalculoANN3Layer(AnnInputData dataN) {
 	float vRefN = 0;
 
 	inputsN [0][0] = 1;
-	inputsN [1][0] = dataN.lux;
-	inputsN [2][0] = dataN.temp;
+	inputsN [1][0] = dataN->lux;
+	inputsN [2][0] = dataN->temp;
 
 	/*
 	 % A con k filas y m columnas, t = size(A)
@@ -120,9 +116,9 @@ float CalculoANN3Layer(AnnInputData dataN) {
 #endif
 
 #ifdef ANN2LAYERS
-static void ClearArraysANN2Layer(void);
+static void clearArraysANN2Layer(void);
 
-static void ClearArraysANN2Layer(void) {
+static void clearArraysANN2Layer(void) {
 	uint8_t i = 1;
 
 	for (i = 1; i < FILAS_RINTERMEDIO1; ++i) {
@@ -131,7 +127,7 @@ static void ClearArraysANN2Layer(void) {
 	tensionReferenciaN[0][0] = 0;
 }
 
-float CalculoANN2Layer(AnnInputData dataN) {
+float calculoANN2Layer(AnnInputData *dataN) {
 	uint8_t i, j, z;
 	/* La matriz de entrada esta compuesta por 3 elementos:
 	 * [el primer elemento corresponde al umbral, Luz, Temperatura]. */
@@ -140,8 +136,8 @@ float CalculoANN2Layer(AnnInputData dataN) {
 	float vRef = 0;
 
 	inputsN [0][0] = 1;
-	inputsN [1][0] = dataN.lux;
-	inputsN [2][0] = dataN.temp;
+	inputsN [1][0] = dataN->lux;
+	inputsN [2][0] = dataN->temp;
 
 	/*
 	 % A con k filas y m columnas, t = size(A)
@@ -186,7 +182,7 @@ float CalculoANN2Layer(AnnInputData dataN) {
 			}
 		}
 	}
-	ClearArraysANN2Layer();
+	clearArraysANN2Layer();
 	vRef = VoltrageReferenceDenormalized(vRefN); //TODO: esto igual sobra
 	return (float) vRef;
 }
@@ -215,13 +211,11 @@ static float CalTanh(float x) {
 	return resul;
 }
 
-AnnInputData NormalizedInput (AnnInputData input) {
-		AnnInputData annInputsN;
-		annInputsN.lux = (input.lux-LIGHT_LOWER_LIMIT)/(LIGHT_UPPER_LIMIT-LIGHT_LOWER_LIMIT);
-		annInputsN.temp = (input.temp-TEMPERATURE_LOWER_LIMIT)/(TEMPERATURE_UPPER_LIMIT-TEMPERATURE_LOWER_LIMIT);
+void normalizedInput (AnnInputData *input, AnnInputData *annInputsN) {
 
+		annInputsN->lux = (input->lux-LIGHT_LOWER_LIMIT)/(LIGHT_UPPER_LIMIT-LIGHT_LOWER_LIMIT);
+		annInputsN->temp = (input->temp-TEMPERATURE_LOWER_LIMIT)/(TEMPERATURE_UPPER_LIMIT-TEMPERATURE_LOWER_LIMIT);
 
-		return annInputsN;
 }
 
 //TODO: esta función, no se si me hará falta.

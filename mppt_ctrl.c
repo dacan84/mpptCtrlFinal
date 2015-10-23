@@ -17,8 +17,8 @@ void MpptCtrl (void){
 	float vRef;
 	float currentVolt;
 
-	vRef = CalculateVref();
-	currentVolt = MeasurePVvoltage() * VOLTAGE_CONVERTION_REFERENCE / 1024;
+	vRef = calculateVref();
+//	currentVolt = MeasurePVvoltage() * VOLTAGE_CONVERTION_REFERENCE / 1024;
 	CompareVoltageLevelsAndActuaction(vRef,currentVolt);
 }
 

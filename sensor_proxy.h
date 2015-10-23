@@ -9,7 +9,8 @@
 #define SENSOR_PROXY_H_
 
 #include "typedefs.h"
+#include "ann_PV/anndatatype.h"
 
-void measureSensors (float *light, float *temperature);
+void measureSensors (AnnInputData *data);
 
 #endif /* SENSOR_PROXY_H_ */

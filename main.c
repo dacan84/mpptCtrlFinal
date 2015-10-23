@@ -11,12 +11,14 @@
 #include "sensor_proxy.h"
 #include "adc_proxy.h"
 #include "typedefs.h"
+#include "ann_PV/anndatatype.h"
+#include "mppt_ctrl.h"
 
 /*
  *  ======== main ========
  */
 
-float light, temperature;
+AnnInputData enviromentalMeasures;
 DecimalVoltages voltages;
 
 int main(void) {
@@ -26,7 +28,8 @@ int main(void) {
 	//configTMP112();
 
 	while (1) {
-		measureSensors(&light,&temperature);
+		MpptCtrl();
+		measureSensors(&enviromentalMeasures);
 		voltages = adquisitionVoltages();
 	}
 

@@ -13,15 +13,14 @@
 #define ANN2LAYERS
 
 #ifdef ANN3LAYERS
-	float CalculoANN3Layer (AnnInputData dataN);
+	float CalculoANN3Layer (AnnInputData *dataN));
 #endif
 
 #ifdef ANN2LAYERS
-	float CalculoANN2Layer (AnnInputData dataN);
+	float calculoANN2Layer(AnnInputData *dataN);
 #endif
 
-AnnInputData NormalizedInput (AnnInputData input);
+void normalizedInput (AnnInputData *input, AnnInputData *annInputsN);
 float VoltrageReference (float tensionReferenciaN);
-void GenerateInArraray (float l, float t);
 
 #endif /* ANN_IMPLEMENTATION_H_ */
