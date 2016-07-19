@@ -18,7 +18,6 @@ DecimalVoltages adquisitionVoltages (void){
 		measureVoltages(&binaryVoltages);
 		voltagesCalculation(&binaryVoltages,&decimalVoltages,&voltageReference);
 		return decimalVoltages;
-
 }
 
 

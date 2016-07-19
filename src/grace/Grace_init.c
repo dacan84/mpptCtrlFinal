@@ -35,6 +35,9 @@ void Grace_init(void)
     /* Stop watchdog timer from timing out during initial start-up. */
     WDTCTL = WDTPW | WDTHOLD;
 
+    /* initialize Config for the MSP430 A3 Timer 0 */
+    Timer0_A3_graceInit();
+
     /* initialize Config for the MSP430 pin mux */
     PinMux_graceInit();
 

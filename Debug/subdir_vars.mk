@@ -12,6 +12,7 @@ CFG_SRCS += \
 C_SRCS += \
 ../adc_proxy.c \
 ../ann_proxy.c \
+../dactest.c \
 ../main.c \
 ../mppt_ctrl.c \
 ../sensor_proxy.c 
@@ -19,6 +20,7 @@ C_SRCS += \
 OBJS += \
 ./adc_proxy.obj \
 ./ann_proxy.obj \
+./dactest.obj \
 ./main.obj \
 ./mppt_ctrl.obj \
 ./sensor_proxy.obj 
@@ -26,6 +28,7 @@ OBJS += \
 C_DEPS += \
 ./adc_proxy.pp \
 ./ann_proxy.pp \
+./dactest.pp \
 ./main.pp \
 ./mppt_ctrl.pp \
 ./sensor_proxy.pp 
@@ -53,6 +56,7 @@ GEN_MISC_DIRS__QUOTED += \
 C_DEPS__QUOTED += \
 "adc_proxy.pp" \
 "ann_proxy.pp" \
+"dactest.pp" \
 "main.pp" \
 "mppt_ctrl.pp" \
 "sensor_proxy.pp" 
@@ -60,6 +64,7 @@ C_DEPS__QUOTED += \
 OBJS__QUOTED += \
 "adc_proxy.obj" \
 "ann_proxy.obj" \
+"dactest.obj" \
 "main.obj" \
 "mppt_ctrl.obj" \
 "sensor_proxy.obj" 
@@ -67,6 +72,7 @@ OBJS__QUOTED += \
 C_SRCS__QUOTED += \
 "../adc_proxy.c" \
 "../ann_proxy.c" \
+"../dactest.c" \
 "../main.c" \
 "../mppt_ctrl.c" \
 "../sensor_proxy.c" 

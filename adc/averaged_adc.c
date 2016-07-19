@@ -1,12 +1,15 @@
 #include "averaged_adc.h"
 #include <driverlib/MSP430FR57xx/driverlib.h>
 
+const float ATTENUATION_PV_VOLTAGE = 300/100;
+const float ATTENUATION_SC_VOLTAGE = 1;
+const float ATTENUATION_SUPPLY_VOLTAGE = 1;
+
 //#define NUMBER_SAMPLES  4
 //TODO: comprobar como funciona la medida del control de la tensión interna puesto que da 1.8V, por otro lado, pensar que hacemos con las referencias para la medida.
-
 static uint16_t voltageAdquisitionMeasure(uint8_t channel);
 static float binaryVoltageToDecimalVoltage(uint16_t binaryVoltage,
-		float *voltageReference);
+		float *voltageReference, float ATTENUATION_VOLTAGE);
 
 static uint16_t voltageAdquisitionMeasure(uint8_t channel) {
 	uint16_t voltage;
@@ -41,9 +44,9 @@ void measureVoltages(BinaryVoltages *binaryVoltages) {
 }
 
 static float binaryVoltageToDecimalVoltage(uint16_t binaryVoltage,
-		float *voltageReference) {
+		float *voltageReference, float ATTENUATION_VOLTAGE) {
 	float voltage;
-	voltage = *voltageReference / ADC_RESOLUTION * binaryVoltage;
+	voltage = ATTENUATION_VOLTAGE*(*voltageReference / ADC_RESOLUTION * binaryVoltage);
 	return voltage;
 }
 
@@ -74,10 +77,9 @@ void voltagesCalculation(BinaryVoltages *binaryVoltages,
 		DecimalVoltages *decimalVoltages, float *voltageReference) {
 
 	decimalVoltages->supplyVoltage = binaryVoltageToDecimalVoltage(
-			binaryVoltages->supplyVoltage, voltageReference);
+			binaryVoltages->supplyVoltage, voltageReference, ATTENUATION_SUPPLY_VOLTAGE);
 	decimalVoltages->superCapCharge = binaryVoltageToDecimalVoltage(
-			binaryVoltages->superCapCharge, voltageReference);
-	decimalVoltages->pvOperationVoltage = binaryVoltageToDecimalVoltage(
-			binaryVoltages->pvOperationVoltage, voltageReference);
-
+			binaryVoltages->superCapCharge, voltageReference, ATTENUATION_SC_VOLTAGE);
+	decimalVoltages->pvOperationVoltage = 0.35+ binaryVoltageToDecimalVoltage(
+			binaryVoltages->pvOperationVoltage, voltageReference, ATTENUATION_PV_VOLTAGE);
 }

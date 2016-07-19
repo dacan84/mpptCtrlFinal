@@ -75,7 +75,7 @@ void PinMux_graceInit(void)
     P2OUT = 0;
 
     /* Port 2 Direction Register */
-    P2DIR = 0;
+    P2DIR = BIT1 | BIT2;
 
     /* Port 2 Interrupt Edge Select */
     P2IES = 0;
@@ -87,7 +87,7 @@ void PinMux_graceInit(void)
     P3OUT = 0;
 
     /* Port 3 Direction Register */
-    P3DIR = 0;
+    P3DIR = BIT0 | BIT1 | BIT2 | BIT3 | BIT4 | BIT5 | BIT6 | BIT7;
 
     /* Port 3 Interrupt Edge Select */
     P3IES = 0;

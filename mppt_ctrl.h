@@ -9,5 +9,6 @@
 #define MPPT_CTRL_H_
 
 	void mpptCtrl (void);
+	void mpptWindowComparatorCtrl(void);
 
 #endif /* MPPT_CTRL_H_ */

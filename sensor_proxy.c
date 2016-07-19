@@ -21,7 +21,6 @@ void measureSensors (AnnInputData *data) {
 	__no_operation();
 	measureLight(&lightBytes);
 	data->lux = calculateLight(&lightBytes);
-
 }
 
 

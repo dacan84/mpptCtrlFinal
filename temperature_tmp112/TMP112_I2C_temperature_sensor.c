@@ -4,9 +4,9 @@
  *  Created on: 7/10/2015
  *      Author: Diego
  */
+
 #include "TMP112_I2C_temperature_sensor.h"
 #include <driverlib/MSP430FR57xx/driverlib.h>
-
 
 const float DEGREES_PER_LSB = 0.0625;
 
@@ -33,7 +33,6 @@ void configTMP112(void) {
 	while (EUSCI_B_I2C_isBusBusy(EUSCI_B0_BASE))
 		;
 	EUSCI_B_I2C_masterSendMultiByteStop(EUSCI_B0_BASE);
-
 }
 
 void measureTMP112(twoBytes *temperatureBytes) {
@@ -51,7 +50,7 @@ void measureTMP112(twoBytes *temperatureBytes) {
 
 	EUSCI_B_I2C_masterSendMultiByteStart(EUSCI_B0_BASE,
 	TMP112_TEMPERATURE_ADDR);
-	while (EUSCI_B_I2C_masterIsStartSent(EUSCI_B0_BASE)!=EUSCI_B_I2C_STOP_SEND_COMPLETE);
+	while (EUSCI_B_I2C_masterIsStartSent(EUSCI_B0_BASE) != EUSCI_B_I2C_STOP_SEND_COMPLETE);
 	EUSCI_B_I2C_masterReceiveMultiByteStop(EUSCI_B0_BASE);
 
 	__no_operation();
@@ -64,12 +63,11 @@ void measureTMP112(twoBytes *temperatureBytes) {
 
 	EUSCI_B_I2C_masterReceiveMultiByteStop(EUSCI_B0_BASE);
 
-	while (EUSCI_B_I2C_masterIsStopSent(EUSCI_B0_BASE)!=EUSCI_B_I2C_STOP_SEND_COMPLETE);
-	while (EUSCI_B_I2C_isBusBusy(EUSCI_B0_BASE)==EUSCI_B_I2C_BUS_BUSY);
+	while (EUSCI_B_I2C_masterIsStopSent(EUSCI_B0_BASE) != EUSCI_B_I2C_STOP_SEND_COMPLETE);
+	while (EUSCI_B_I2C_isBusBusy(EUSCI_B0_BASE) == EUSCI_B_I2C_BUS_BUSY);
 	__no_operation();
 	__no_operation();
 	EUSCI_B_I2C_disable(EUSCI_B0_BASE);
-
 }
 
 

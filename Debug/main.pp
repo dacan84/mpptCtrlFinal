@@ -19,6 +19,31 @@ main.obj: ../sensor_proxy.h
 main.obj: ../ann_PV/anndatatype.h
 main.obj: ../adc_proxy.h
 main.obj: ../mppt_ctrl.h
+main.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/driverlib.h
+main.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/inc/hw_memmap.h
+main.obj: C:/ti/ccsv6/ccs_base/msp430/include/msp430fr57xxgeneric.h
+main.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/adc10_b.h
+main.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/comp_d.h
+main.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/crc.h
+main.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/cs.h
+main.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/dma.h
+main.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/eusci_a_spi.h
+main.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/eusci_a_uart.h
+main.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/eusci_b_i2c.h
+main.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/eusci_b_spi.h
+main.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/framctl.h
+main.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/gpio.h
+main.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/mpu.h
+main.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/mpy32.h
+main.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/pmm.h
+main.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/ref.h
+main.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/rtc_b.h
+main.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/sfr.h
+main.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/sysctl.h
+main.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/timer_a.h
+main.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/timer_b.h
+main.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/tlv.h
+main.obj: C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/wdt_a.h
 
 ../main.c: 
 C:/ti/ccsv6/ccs_base/msp430/include/msp430.h: 
@@ -39,3 +64,28 @@ C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/include/stdint.h:
 ../ann_PV/anndatatype.h: 
 ../adc_proxy.h: 
 ../mppt_ctrl.h: 
+C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/driverlib.h: 
+C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/inc/hw_memmap.h: 
+C:/ti/ccsv6/ccs_base/msp430/include/msp430fr57xxgeneric.h: 
+C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/adc10_b.h: 
+C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/comp_d.h: 
+C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/crc.h: 
+C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/cs.h: 
+C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/dma.h: 
+C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/eusci_a_spi.h: 
+C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/eusci_a_uart.h: 
+C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/eusci_b_i2c.h: 
+C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/eusci_b_spi.h: 
+C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/framctl.h: 
+C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/gpio.h: 
+C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/mpu.h: 
+C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/mpy32.h: 
+C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/pmm.h: 
+C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/ref.h: 
+C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/rtc_b.h: 
+C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/sfr.h: 
+C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/sysctl.h: 
+C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/timer_a.h: 
+C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/timer_b.h: 
+C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/tlv.h: 
+C:/ti/msp430/MSPWare_2_30_00_49/driverlib/driverlib/MSP430FR57xx/wdt_a.h: 

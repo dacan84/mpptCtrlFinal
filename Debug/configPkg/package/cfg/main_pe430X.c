@@ -169,6 +169,12 @@ Void ti_catalog_msp430_init_Boot_init(Void)
 /* ADC10 stuff from C:/ti/grace_3_10_00_82/packages/ti/mcu/msp430/csl2/adc/./ADC10_B.xdt */
 
 /*
+ * ======== ti.mcu.msp430.csl2.timer.Timer0_A3 TEMPLATE ========
+ */
+
+/* Timer_A stuff from C:/ti/grace_3_10_00_82/packages/ti/mcu/msp430/csl2/timer/./ITimer_A.xdt */
+
+/*
  * ======== ti.mcu.msp430.csl2.ref.REF TEMPLATE ========
  */
 

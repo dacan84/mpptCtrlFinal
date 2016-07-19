@@ -9,6 +9,7 @@ extern "C" {
 #endif
 
 /* external peripheral initialization functions */
+void Timer0_A3_graceInit(void);
 void PinMux_graceInit(void);
 void CS_graceInit(void);
 void EUSCI_B0_graceInit(void);

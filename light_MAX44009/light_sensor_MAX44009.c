@@ -8,6 +8,10 @@
 #include "../light_MAX44009/light_sensor_MAX44009.h"
 #include <driverlib/MSP430FR57xx/driverlib.h>
 
+//TODO: quitar, solo para verificacion
+extern uint16_t exponente;
+extern	uint16_t mantisa;
+
 static uint16_t twoPower(uint8_t exponent);
 
 void measureLight(twoBytes *lightBytes) {
@@ -41,6 +45,10 @@ float calculateLight(twoBytes *lightBytes) {
 	lightFloatBytes.exponent = lightBytes->highByte >> 4;
 	lightFloatBytes.mantissa = (lightBytes->highByte << 4)
 			| lightBytes->lowByte;
+
+	//TODO: quitar, solo para verificacion
+	exponente = (uint16_t)lightFloatBytes.exponent;
+	mantisa = (uint16_t)lightFloatBytes.mantissa;
 
 	lightFloatBytes.mantissa = lightFloatBytes.mantissa * 0.045;
 

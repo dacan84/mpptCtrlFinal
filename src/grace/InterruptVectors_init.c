@@ -22,6 +22,9 @@
 
 /* USER CODE START (section: InterruptVectors_init_c_prologue) */
 /* User defined includes, defines, global variables and functions */
+#include "../../mppt_ctrl.h"
+#include <driverlib/MSP430FR57xx/driverlib.h>
+
 /* USER CODE END (section: InterruptVectors_init_c_prologue) */
 
 /*
@@ -31,3 +34,73 @@ void InterruptVectors_graceInit(void)
 {
 }
 
+/*
+ *  ======== Timer0_A3 Interrupt Service Routine ======== 
+ */
+#pragma vector=TIMER0_A0_VECTOR
+__interrupt void TIMER0_A0_ISR_HOOK(void)
+{
+    /* USER CODE START (section: TIMER0_A0_ISR_HOOK) */
+    /* replace this comment with your code */
+    /* USER CODE END (section: TIMER0_A0_ISR_HOOK) */
+}
+
+/*
+ *  ======== Timer0_A3 Interrupt Service Routine ======== 
+ */
+#pragma vector=TIMER0_A1_VECTOR
+__interrupt void TIMER0_A1_ISR_HOOK(void)
+{
+    /* USER CODE START (section: TIMER0_A1_ISR_HOOK) */
+	GPIO_setOutputLowOnPin(GPIO_PORT_P2, GPIO_PIN2);
+	//mpptCtrl();
+	mpptWindowComparatorCtrl();
+	GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN2);
+	Timer_A_clearTimerInterrupt(TIMER_A0_BASE);
+
+    /* USER CODE END (section: TIMER0_A1_ISR_HOOK) */
+}
+
+
+
+/*
+ *  ======== User NMI Interrupt Service Routine ========
+ *
+ * Here are several important notes on using User NMI interrupt Handler:
+ * 1. User could use the following code to efficiently service the interrupt
+ *    handler. Just simply copy and paste it into your user definable code
+ *    section.
+
+    switch(__even_in_range(SYSUNIV, 4))
+    {
+        case SYSUNIV_NONE:   break;         // Vector  SYSUNIV_NONE:   No interrupt
+        case SYSUNIV_NMIIFG: break;         // Vector  SYSUNIV_NMIIFG: NMIIFG
+        case SYSUNIV_OFIFG:  break;         // Vector  SYSUNIV_OFIFG:  Osc. Fail - OFIFG
+        default: break;
+    }
+
+ * 2. User could also exit from low power mode and continue with main
+ *    program execution by using the following instruction before exiting
+ *    this interrupt handler.
+ *
+ *    __bic_SR_register_on_exit(LPMx_bits);
+ *
+ */
+#pragma vector=UNMI_VECTOR
+__interrupt void UNMI_ISR_HOOK(void)
+{
+    /* USER CODE START (section: UNMI_ISR_HOOK) */
+    /* replace this comment with your code */
+    /* USER CODE END (section: UNMI_ISR_HOOK) */
+}
+
+/*
+ *  ======== System NMI Interrupt Service Routine ========
+ */
+#pragma vector=SYSNMI_VECTOR
+__interrupt void SYSNMI_ISR_HOOK(void)
+{
+    /* USER CODE START (section: SNMI_ISR_HOOK) */
+    /* replace this comment with your code */
+    /* USER CODE END (section: SNMI_ISR_HOOK) */
+}
